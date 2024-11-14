@@ -1,0 +1,30 @@
+# EditorConfig is awesome: http://EditorConfig.org
+
+# Top-most EditorConfig file.
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+indent_size = 4
+indent_style = space
+insert_final_newline = true
+max_line_length = 120
+trim_trailing_whitespace = true
+
+# vCards must use CRLF EOLs:
+# https://datatracker.ietf.org/doc/html/rfc6350#section-3.2
+[*.{vcard,vcf}]
+end_of_line = crlf
+indent_size = unset
+indent_style = unset
+insert_final_newline = false
+max_line_length = 75
+
+[*.{ya,y}ml]
+indent_size = 2
+indent_style = space
+
+[*.json]
+indent_size = 2
+indent_style = space

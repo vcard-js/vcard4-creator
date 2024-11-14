@@ -1,0 +1,77 @@
+import { Altid, Calscale, Cardinality, Group, Options, Pid, Pref, Type, Value } from '../types.js';
+import isString from '../util/is-string.js';
+import Property from './Property.js';
+
+export interface {{{pascalCase property}}}Parameters {
+    [key: string]: never;
+    value?: '';
+    altid?: Altid;
+    calscale?: Calscale; // For `date-and-or-time` type only!
+    geo?: string;
+    label?: string;
+    language?: string;
+    mediatype?: string;
+    pid?: Pid;
+    pref?: Pref;
+    sortAs?: string;
+    type?: Type;
+    tz?: string;
+}
+
+export type {{{pascalCase property}}}RestConfig = [value: string, parameters?: {{{pascalCase property}}}Parameters, options?: Options];
+
+export type {{{pascalCase property}}}Config = {{{pascalCase property}}}Property | {{{pascalCase property}}}RestConfig | string;
+
+const VALUE: unique symbol = Symbol.for('value');
+
+/**
+ * > Purpose:  ...
+ * >
+ * > Value type:  ...
+ * >
+ * > ABNF:
+ * >   {{{upperKebabCase property}}}-param =
+ * >
+ * >   {{{upperKebabCase property}}}-value =
+ * >
+ * > Example:
+ * >   {{{upperKebabCase property}}}:
+ *
+ * @see https://datatracker.ietf.org/doc/html/rfc6350#section-
+ */
+export default class {{{pascalCase property}}}Property extends Property {
+    static readonly CARDINALITY: Cardinality = '{{{cardinality}}}'; // {{{cardinalityDescription}}}
+
+    static readonly DEFAULT_VALUE_TYPE: Value = '';
+
+    group: Group;
+
+    parameters: {{{pascalCase property}}}Parameters = {};
+
+    [VALUE]: string;
+
+    constructor(value: string, parameters: {{{pascalCase property}}}Parameters = {}, { group = '' }: Options = {}) {
+        super();
+
+        if (!isString(value))
+            throw new TypeError(`The value "${value}" is not a string type`);
+
+        this.group = group;
+        this.parameters = parameters;
+        this[VALUE] = value;
+    }
+
+    valueOf(): string {
+        return this[VALUE];
+    }
+
+    static from(value: {{{pascalCase property}}}Config): {{{pascalCase property}}}Property {
+        if (value instanceof {{{pascalCase property}}}Property) return value;
+
+        if (Array.isArray(value)) return new {{{pascalCase property}}}Property(...value);
+
+        if (isString(value)) return new {{{pascalCase property}}}Property(value);
+
+        throw new TypeError(`The value "${value}" is not a {{{pascalCase property}}}Config type`);
+    }
+}

@@ -1,0 +1,99 @@
+{
+  "name": "@vcard/vcard4-creator",
+  "version": "0.0.0",
+  "description": "A vCard 4 creation library.",
+  "keywords": [
+    "create",
+    "creator",
+    "generate",
+    "generator",
+    "make",
+    "maker",
+    "vcard",
+    "vcard4",
+    "vcf"
+  ],
+  "homepage": "https://github.com/vcard-js/vcard4-creator#readme",
+  "bugs": {
+    "url": "https://github.com/vcard-js/vcard4-creator/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vcard-js/vcard4-creator.git"
+  },
+  "license": "MIT",
+  "author": "James Benner <hello@jamesbenner.com> (https://www.jamesbenner.com/)",
+  "type": "module",
+  "exports": {
+    "require": {
+      "types": "./dist/cjs/index.d.ts",
+      "default": "./dist/cjs/index.js"
+    },
+    "import": {
+      "types": "./dist/esm/index.d.ts",
+      "default": "./dist/esm/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "preapi-extractor": "npm run build",
+    "api-extractor": "api-extractor run --local",
+    "prebuild": "npm run clean",
+    "build": "node ./scripts/build.js",
+    "clean": "rimraf dist",
+    "create-property": "node ./scripts/create-property.js",
+    "fix-lint": "eslint --fix",
+    "lint": "eslint",
+    "prepack": "npm run build",
+    "prepare": "husky",
+    "print-property": "node ./scripts/print-property.js",
+    "simulate-ci": "node ./scripts/simulate-ci.js",
+    "test": "vitest --watch=false",
+    "watch-test": "vitest"
+  },
+  "dependencies": {
+    "@vcard/vcard4-meta": "^1.0.0-rc.4",
+    "lodash.isplainobject": "^4.0.6",
+    "lodash.kebabcase": "^4.1.1",
+    "ts-essentials": "^10.0.3",
+    "type-fest": "^4.26.1"
+  },
+  "devDependencies": {
+    "@arethetypeswrong/cli": "^0.16.4",
+    "@eslint/compat": "^1.2.2",
+    "@eslint/js": "^9.14.0",
+    "@microsoft/api-extractor": "^7.47.11",
+    "@stylistic/eslint-plugin": "^2.10.1",
+    "@types/lodash.isplainobject": "^4.0.9",
+    "@types/lodash.kebabcase": "^4.1.9",
+    "@types/node": "^18.19.64",
+    "chai": "^5.1.2",
+    "chalk": "^5.3.0",
+    "command-exists": "^1.2.9",
+    "esbuild": "0.24.0",
+    "eslint": "^9.14.0",
+    "eslint-plugin-no-only-tests": "^3.3.0",
+    "eslint-plugin-sort": "^4.0.0",
+    "execa": "^9.5.1",
+    "globals": "^15.12.0",
+    "handlebars": "^4.7.8",
+    "husky": "^9.1.6",
+    "lint-staged": "^15.2.10",
+    "lodash": "^4.17.21",
+    "log-symbols": "^7.0.0",
+    "np": "^10.0.7",
+    "rimraf": "^5.0.10",
+    "sort-package-json": "^2.10.1",
+    "typescript": "^5.6.3",
+    "typescript-eslint": "^8.13.0",
+    "vitest": "^2.1.4"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

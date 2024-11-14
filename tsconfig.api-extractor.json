@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    // API Extractor does not yet recognize a ES2023 target so we're using ESNext here as a workaround.
+    "target": "ESNext",
+    "module": "Node16",
+    "rootDir": "${configDir}/src"
+  },
+  "include": ["src"]
+}
