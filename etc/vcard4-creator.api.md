@@ -1847,10 +1847,9 @@ export type TzUriValueParameters = {
 export type UidConfig = UidProperty | UidRestConfig | string;
 
 // @public (undocumented)
-export interface UidParameters {
-    // (undocumented)
+export type UidParameters = {
     value?: Extract<Value, 'uri' | 'text'>;
-}
+} & CommonParameters;
 
 // @public
 export class UidProperty extends Property {
