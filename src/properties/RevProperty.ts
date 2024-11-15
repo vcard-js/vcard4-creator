@@ -1,11 +1,11 @@
-import type { Cardinality, Group, Options, Value } from '../types.js';
+import type { Cardinality, CommonParameters, Group, Options, Value } from '../types.js';
 import isString from '../util/is-string.js';
 import isValidGroup from '../util/is-valid-group.js';
 import Property from './Property.js';
 
-export interface RevParameters {
+export type RevParameters = {
     value?: Extract<Value, 'timestamp'>;
-}
+} & CommonParameters;
 
 export type RevRestConfig = [value: string, parameters?: RevParameters, options?: Options];
 

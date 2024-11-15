@@ -1527,10 +1527,9 @@ export type RelatedUriOrUndefinedValueParameters = {
 export type RevConfig = RevProperty | RevRestConfig | string;
 
 // @public (undocumented)
-export interface RevParameters {
-    // (undocumented)
+export type RevParameters = {
     value?: Extract<Value, 'timestamp'>;
-}
+} & CommonParameters;
 
 // @public
 export class RevProperty extends Property {
