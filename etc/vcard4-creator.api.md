@@ -1557,20 +1557,14 @@ export type RevRestConfig = [value: string, parameters?: RevParameters, options?
 export type RoleConfig = RoleProperty | RoleRestConfig | string;
 
 // @public (undocumented)
-export interface RoleParameters {
-    // (undocumented)
-    altid?: Altid;
-    // (undocumented)
-    language?: string;
-    // (undocumented)
-    pid?: Pid;
-    // (undocumented)
-    pref?: Pref;
-    // (undocumented)
-    type?: Type;
-    // (undocumented)
+export type RoleParameters = {
     value?: Extract<Value, 'text'>;
-}
+    language?: string;
+    pid?: Pid;
+    pref?: Pref;
+    type?: Type;
+    altid?: Altid;
+} & CommonParameters;
 
 // @public
 export class RoleProperty extends Property {
