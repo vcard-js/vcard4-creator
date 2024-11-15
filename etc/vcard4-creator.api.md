@@ -1747,18 +1747,13 @@ export type TelUriValueParameters = {
 export type TitleConfig = TitleProperty | TitleRestConfig | string;
 
 // @public (undocumented)
-export interface TitleParameters {
-    // (undocumented)
-    altid?: Altid;
-    // (undocumented)
-    mediatype?: string;
-    // (undocumented)
-    pid?: Pid;
-    // (undocumented)
-    pref?: Pref;
-    // (undocumented)
+export type TitleParameters = {
     value?: Extract<Value, 'text'>;
-}
+    pid?: Pid;
+    pref?: Pref;
+    altid?: Altid;
+    mediatype?: string;
+} & CommonParameters;
 
 // @public
 export class TitleProperty extends Property {
