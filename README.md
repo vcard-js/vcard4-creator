@@ -582,10 +582,10 @@ To-Do
         - [x] `PREF` Parameter
         - [x] `TYPE` Parameter
         - [x] `MEDIATYPE` Parameter
-        - [ ] `AUTHOR` Parameter _(RFC 9554)_
-        - [ ] `AUTHOR-NAME` Parameter _(RFC 9554)_
-        - [ ] `CREATED` Parameter _(RFC 9554)_
-        - [ ] `DERIVED` Parameter _(RFC 9554)_
+        - [x] `AUTHOR` Parameter _(RFC 9554)_
+        - [x] `AUTHOR-NAME` Parameter _(RFC 9554)_
+        - [x] `CREATED` Parameter _(RFC 9554)_
+        - [x] `DERIVED` Parameter _(RFC 9554)_
         - [ ] `PROP-ID` Parameter _(RFC 9554)_
     - [x] `UID`
         - [x] Line Folding

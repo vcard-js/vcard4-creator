@@ -1,4 +1,4 @@
-import type { Altid, Cardinality, Group, Options, Pid, Pref, Type, Value } from '../types.js';
+import type { Altid, Cardinality, CommonParameters, Group, Options, Pid, Pref, Type, Value } from '../types.js';
 import {
     getInvalidMediatypeValueParameterMessage,
     getInvalidPidParameterMessage,
@@ -15,7 +15,7 @@ export type TzCommonParameters = {
     pid?: Pid;
     pref?: Pref;
     type?: Type;
-};
+} & CommonParameters;
 
 export type TzTextOrUtcOffsetOrUndefinedValueParameters = {
     value?: Extract<Value, 'text' | 'utc-offset'>;

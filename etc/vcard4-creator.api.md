@@ -1794,7 +1794,7 @@ export type TzCommonParameters = {
     pid?: Pid;
     pref?: Pref;
     type?: Type;
-};
+} & CommonParameters;
 
 // @public (undocumented)
 export type TzConfig = TzProperty | TzRestConfig | string;
