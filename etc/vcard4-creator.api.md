@@ -1470,7 +1470,7 @@ export type RelatedCommonParameters = {
     pref?: Pref;
     altid?: Altid;
     type?: RelatedType;
-};
+} & CommonParameters;
 
 // @public (undocumented)
 export type RelatedConfig = RelatedProperty | RelatedRestConfig | string;
