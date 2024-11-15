@@ -1880,20 +1880,14 @@ export type UppercaseAlpha = 'A' | 'B' | 'C' | 'D' | 'E' | 'F' | 'G' | 'H' | 'I'
 export type UrlConfig = UrlProperty | UrlRestConfig | string;
 
 // @public (undocumented)
-export interface UrlParameters {
-    // (undocumented)
-    altid?: Altid;
-    // (undocumented)
-    mediatype?: string;
-    // (undocumented)
-    pid?: Pid;
-    // (undocumented)
-    pref?: Pref;
-    // (undocumented)
-    type?: Type;
-    // (undocumented)
+export type UrlParameters = {
     value?: Extract<Value, 'uri'>;
-}
+    pid?: Pid;
+    pref?: Pref;
+    type?: Type;
+    mediatype?: string;
+    altid?: Altid;
+} & CommonParameters;
 
 // @public
 export class UrlProperty extends Property {
