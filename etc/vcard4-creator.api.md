@@ -1647,18 +1647,13 @@ export type SoundRestConfig = [value: string, parameters?: SoundParameters, opti
 export type SourceConfig = SourceProperty | SourceRestConfig | string;
 
 // @public (undocumented)
-export interface SourceParameters {
-    // (undocumented)
-    altid?: Altid;
-    // (undocumented)
-    mediatype?: string;
-    // (undocumented)
-    pid?: Pid;
-    // (undocumented)
-    pref?: Pref;
-    // (undocumented)
+export type SourceParameters = {
     value?: Extract<Value, 'uri'>;
-}
+    pid?: Pid;
+    pref?: Pref;
+    altid?: Altid;
+    mediatype?: string;
+} & CommonParameters;
 
 // @public
 export class SourceProperty extends Property {
