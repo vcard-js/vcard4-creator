@@ -616,10 +616,10 @@ To-Do
         - [x] Value Escaping
         - [x] `VALUE` Parameter
         - [x] `ALTID` Parameter
-        - [ ] `AUTHOR` Parameter _(RFC 9554)_
-        - [ ] `AUTHOR-NAME` Parameter _(RFC 9554)_
-        - [ ] `CREATED` Parameter _(RFC 9554)_
-        - [ ] `DERIVED` Parameter _(RFC 9554)_
+        - [x] `AUTHOR` Parameter _(RFC 9554)_
+        - [x] `AUTHOR-NAME` Parameter _(RFC 9554)_
+        - [x] `CREATED` Parameter _(RFC 9554)_
+        - [x] `DERIVED` Parameter _(RFC 9554)_
         - [ ] `PROP-ID` Parameter _(RFC 9554)_
 - [x] Implement Parameter Value Encoding as Specified in [RFC6868](https://datatracker.ietf.org/doc/html/rfc6868)
 - [x] Implement Property Grouping As Specified In [RFC6350 § 3.3](https://www.rfc-editor.org/rfc/rfc6350.html#section-3.3)

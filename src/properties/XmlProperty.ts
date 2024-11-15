@@ -1,12 +1,12 @@
-import type { Altid, Cardinality, Group, Options, Value } from '../types.js';
+import type { Altid, Cardinality, CommonParameters, Group, Options, Value } from '../types.js';
 import isString from '../util/is-string.js';
 import isValidGroup from '../util/is-valid-group.js';
 import Property from './Property.js';
 
-export interface XmlParameters {
+export type XmlParameters = {
     value?: Extract<Value, 'text'>;
     altid?: Altid;
-}
+} & CommonParameters;
 
 export type XmlRestConfig = [value: string, parameters?: XmlParameters, options?: Options];
 

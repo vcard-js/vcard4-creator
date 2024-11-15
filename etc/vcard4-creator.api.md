@@ -2149,12 +2149,10 @@ export type VersionRestConfig = [value: string, parameters?: VersionParameters, 
 export type XmlConfig = XmlProperty | XmlRestConfig | string;
 
 // @public (undocumented)
-export interface XmlParameters {
-    // (undocumented)
-    altid?: Altid;
-    // (undocumented)
+export type XmlParameters = {
     value?: Extract<Value, 'text'>;
-}
+    altid?: Altid;
+} & CommonParameters;
 
 // @public
 export class XmlProperty extends Property {
