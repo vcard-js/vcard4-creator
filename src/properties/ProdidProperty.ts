@@ -1,11 +1,11 @@
-import type { Cardinality, Group, Options, Value } from '../types.js';
+import type { Cardinality, CommonParameters, Group, Options, Value } from '../types.js';
 import isString from '../util/is-string.js';
 import isValidGroup from '../util/is-valid-group.js';
 import Property from './Property.js';
 
-export interface ProdidParameters {
+export type ProdidParameters = {
     value?: Extract<Value, 'text'>;
-}
+} & CommonParameters;
 
 export type ProdidRestConfig = [value: string, parameters?: ProdidParameters, options?: Options];
 

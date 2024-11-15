@@ -1418,10 +1418,9 @@ export type PrefInclusiveFrom = 1;
 export type ProdidConfig = ProdidProperty | ProdidRestConfig | string;
 
 // @public (undocumented)
-export interface ProdidParameters {
-    // (undocumented)
+export type ProdidParameters = {
     value?: Extract<Value, 'text'>;
-}
+} & CommonParameters;
 
 // @public
 export class ProdidProperty extends Property {
