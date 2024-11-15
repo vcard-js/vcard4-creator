@@ -1361,20 +1361,14 @@ export type OrgRestConfig = [value: string, parameters?: OrgParameters, options?
 export type PhotoConfig = PhotoProperty | PhotoRestConfig | string;
 
 // @public (undocumented)
-export interface PhotoParameters {
-    // (undocumented)
-    altid?: Altid;
-    // (undocumented)
-    mediatype?: string;
-    // (undocumented)
-    pid?: Pid;
-    // (undocumented)
-    pref?: Pref;
-    // (undocumented)
-    type?: Type;
-    // (undocumented)
+export type PhotoParameters = {
     value?: Extract<Value, 'uri'>;
-}
+    altid?: Altid;
+    type?: Type;
+    mediatype?: string;
+    pref?: Pref;
+    pid?: Pid;
+} & CommonParameters;
 
 // @public
 export class PhotoProperty extends Property {

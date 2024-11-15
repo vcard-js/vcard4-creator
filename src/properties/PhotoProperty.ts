@@ -1,4 +1,4 @@
-import type { Altid, Cardinality, Group, Options, Pid, Pref, Type, Value } from '../types.js';
+import type { Altid, Cardinality, CommonParameters, Group, Options, Pid, Pref, Type, Value } from '../types.js';
 import { getInvalidPidParameterMessage, getInvalidPrefParameterMessage } from '../util/error-messages.js';
 import isString from '../util/is-string.js';
 import isValidGroup from '../util/is-valid-group.js';
@@ -6,14 +6,14 @@ import isValidPidParameter from '../util/is-valid-pid-parameter.js';
 import isValidPrefParameter from '../util/is-valid-pref-parameter.js';
 import Property from './Property.js';
 
-export interface PhotoParameters {
+export type PhotoParameters = {
     value?: Extract<Value, 'uri'>;
     altid?: Altid;
     type?: Type;
     mediatype?: string;
     pref?: Pref;
     pid?: Pid;
-}
+} & CommonParameters;
 
 export type PhotoRestConfig = [value: string, parameters?: PhotoParameters, options?: Options];
 
