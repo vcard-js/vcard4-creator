@@ -1691,7 +1691,7 @@ export type TelCommonParameters = {
     pid?: Pid;
     pref?: Pref;
     altid?: Altid;
-};
+} & CommonParameters;
 
 // @public (undocumented)
 export type TelConfig = TelProperty | TelRestConfig | string;

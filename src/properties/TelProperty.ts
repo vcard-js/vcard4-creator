@@ -1,4 +1,4 @@
-import type { Altid, Cardinality, Group, Options, Pid, Pref, Type, Value } from '../types.js';
+import type { Altid, Cardinality, CommonParameters, Group, Options, Pid, Pref, Type, Value } from '../types.js';
 import {
     getInvalidMediatypeValueParameterMessage,
     getInvalidPidParameterMessage,
@@ -17,7 +17,7 @@ export type TelCommonParameters = {
     pid?: Pid;
     pref?: Pref;
     altid?: Altid;
-};
+} & CommonParameters;
 
 export type TelUriValueParameters = {
     value: Extract<Value, 'uri'>;
