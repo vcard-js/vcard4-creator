@@ -1603,22 +1603,15 @@ export type Sex = '' | 'F' | 'M' | 'N' | 'O' | 'U';
 export type SoundConfig = SoundProperty | SoundRestConfig | string;
 
 // @public (undocumented)
-export interface SoundParameters {
-    // (undocumented)
-    altid?: Altid;
-    // (undocumented)
-    language?: string;
-    // (undocumented)
-    mediatype?: string;
-    // (undocumented)
-    pid?: Pid;
-    // (undocumented)
-    pref?: Pref;
-    // (undocumented)
-    type?: Type;
-    // (undocumented)
+export type SoundParameters = {
     value?: Extract<Value, 'uri'>;
-}
+    language?: string;
+    pid?: Pid;
+    pref?: Pref;
+    type?: Type;
+    mediatype?: string;
+    altid?: Altid;
+} & CommonParameters;
 
 // @public
 export class SoundProperty extends Property {

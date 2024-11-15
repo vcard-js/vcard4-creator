@@ -1,4 +1,4 @@
-import type { Altid, Cardinality, Group, Options, Pid, Pref, Type, Value } from '../types.js';
+import type { Altid, Cardinality, CommonParameters, Group, Options, Pid, Pref, Type, Value } from '../types.js';
 import { getInvalidPidParameterMessage, getInvalidPrefParameterMessage } from '../util/error-messages.js';
 import isString from '../util/is-string.js';
 import isValidGroup from '../util/is-valid-group.js';
@@ -6,7 +6,7 @@ import isValidPidParameter from '../util/is-valid-pid-parameter.js';
 import isValidPrefParameter from '../util/is-valid-pref-parameter.js';
 import Property from './Property.js';
 
-export interface SoundParameters {
+export type SoundParameters = {
     value?: Extract<Value, 'uri'>;
     language?: string;
     pid?: Pid;
@@ -14,7 +14,7 @@ export interface SoundParameters {
     type?: Type;
     mediatype?: string;
     altid?: Altid;
-}
+} & CommonParameters;
 
 export type SoundRestConfig = [value: string, parameters?: SoundParameters, options?: Options];
 
