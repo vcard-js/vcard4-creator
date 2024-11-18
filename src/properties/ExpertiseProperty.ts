@@ -1,9 +1,14 @@
-import type { Altid, Cardinality, CommonParameters, Group, Options, Pref, Type, Value } from '../types.js';
-import { getInvalidIndexParameterMessage, getInvalidPrefParameterMessage } from '../util/error-messages.js';
+import type { Altid, Cardinality, CommonParameters, Group, Options, Pref, PropId, Type, Value } from '../types.js';
+import {
+    getInvalidIndexParameterMessage,
+    getInvalidPrefParameterMessage,
+    getInvalidPropIdParameterMessage
+} from '../util/error-messages.js';
 import isString from '../util/is-string.js';
 import isValidGroup from '../util/is-valid-group.js';
 import isValidIndexParameter from '../util/is-valid-index-parameter.js';
 import isValidPrefParameter from '../util/is-valid-pref-parameter.js';
+import isValidPropIdParameter from '../util/is-valid-prop-id-parameter.js';
 import Property from './Property.js';
 
 export type ExpertiseLevel = 'beginner' | 'average' | 'expert';
@@ -15,6 +20,7 @@ export type ExpertiseParameters = {
     level?: ExpertiseLevel;
     pref?: Pref;
     type?: Type;
+    propId?: PropId;
 } & CommonParameters;
 
 export type ExpertiseRestConfig = [value: string, parameters?: ExpertiseParameters, options?: Options];
@@ -88,13 +94,17 @@ export default class ExpertiseProperty extends Property {
         throw new TypeError(`The value "${value}" is not a ExpertiseConfig type`);
     }
 
-    static validateParameters({ index, pref }: ExpertiseParameters): void {
+    static validateParameters({ index, pref, propId }: ExpertiseParameters): void {
         if (index && !isValidIndexParameter(index)) {
             throw new TypeError(getInvalidIndexParameterMessage({ index }));
         }
 
         if (pref && !isValidPrefParameter(pref)) {
             throw new TypeError(getInvalidPrefParameterMessage({ pref }));
+        }
+
+        if (propId !== undefined && !isValidPropIdParameter(propId)) {
+            throw new TypeError(getInvalidPropIdParameterMessage({ propId }));
         }
     }
 }

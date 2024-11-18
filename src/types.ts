@@ -16,6 +16,7 @@ export type Pid = number | number[];
 export type PrefInclusiveFrom = 1;
 export type PrefExclusiveTo = 101;
 export type Pref = IntRange<PrefInclusiveFrom, PrefExclusiveTo>;
+export type PropId = number | string;
 export type Type = 'home' | 'work';
 export type UppercaseAlpha = 'A'
     | 'B'

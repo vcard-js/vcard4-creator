@@ -1,8 +1,9 @@
-import type { Altid, Cardinality, CommonParameters, Group, Options, Pid, Pref, Type, Value } from '../types.js';
+import type { Altid, Cardinality, CommonParameters, Group, Options, Pid, Pref, PropId, Type, Value } from '../types.js';
 import {
     getInvalidIndexParameterMessage,
     getInvalidPidParameterMessage,
-    getInvalidPrefParameterMessage
+    getInvalidPrefParameterMessage,
+    getInvalidPropIdParameterMessage
 } from '../util/error-messages.js';
 import isString from '../util/is-string.js';
 import isValidGroup from '../util/is-valid-group.js';
@@ -18,6 +19,7 @@ export type OrgDirectoryParameters = {
     pid?: Pid;
     pref?: Pref;
     type?: Type;
+    propId?: PropId;
 } & CommonParameters;
 
 export type OrgDirectoryRestConfig = [value: string, parameters?: OrgDirectoryParameters, options?: Options];
@@ -103,7 +105,7 @@ export default class OrgDirectoryProperty extends Property {
         throw new TypeError(`The value "${value}" is not a OrgDirectoryConfig type`);
     }
 
-    static validateParameters({ index, pid, pref }: OrgDirectoryParameters): void {
+    static validateParameters({ index, pid, pref, propId }: OrgDirectoryParameters): void {
         if (index && !isValidIndexParameter(index)) {
             throw new TypeError(getInvalidIndexParameterMessage({ index }));
         }
@@ -114,6 +116,10 @@ export default class OrgDirectoryProperty extends Property {
 
         if (pref && !isValidPrefParameter(pref)) {
             throw new TypeError(getInvalidPrefParameterMessage({ pref }));
+        }
+
+        if (propId !== undefined && !isValidPrefParameter(propId)) {
+            throw new TypeError(getInvalidPropIdParameterMessage({ propId }));
         }
     }
 }

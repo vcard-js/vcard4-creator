@@ -1,13 +1,15 @@
-import type { Altid, Cardinality, CommonParameters, Group, Options, Pid, Pref, Type, Value } from '../types.js';
+import type { Altid, Cardinality, CommonParameters, Group, Options, Pid, Pref, PropId, Type, Value } from '../types.js';
 import {
     getInvalidMediatypeValueParameterMessage,
     getInvalidPidParameterMessage,
-    getInvalidPrefParameterMessage
+    getInvalidPrefParameterMessage,
+    getInvalidPropIdParameterMessage
 } from '../util/error-messages.js';
 import isString from '../util/is-string.js';
 import isValidGroup from '../util/is-valid-group.js';
 import isValidPidParameter from '../util/is-valid-pid-parameter.js';
 import isValidPrefParameter from '../util/is-valid-pref-parameter.js';
+import isValidPropIdParameter from '../util/is-valid-prop-id-parameter.js';
 import Property from './Property.js';
 
 export type KeyCommonParameters = {
@@ -15,6 +17,7 @@ export type KeyCommonParameters = {
     pid?: Pid;
     pref?: Pref;
     type?: Type;
+    propId?: PropId;
 } & CommonParameters;
 
 export type KeyUriOrUndefinedValueParameters = {
@@ -108,7 +111,7 @@ export default class KeyProperty extends Property {
     }
 
     static validateParameters(parameters: KeyParameters): void {
-        const { mediatype, pid, pref, value } = parameters as Record<string, unknown>;
+        const { mediatype, pid, pref, propId, value } = parameters as Record<string, unknown>;
 
         if (mediatype && isString(value) && value.toLowerCase() !== 'uri') {
             throw new TypeError(getInvalidMediatypeValueParameterMessage({ value }));
@@ -120,6 +123,10 @@ export default class KeyProperty extends Property {
 
         if (pref && !isValidPrefParameter(pref)) {
             throw new TypeError(getInvalidPrefParameterMessage({ pref }));
+        }
+
+        if (propId !== undefined && !isValidPropIdParameter(propId)) {
+            throw new TypeError(getInvalidPropIdParameterMessage({ propId }));
         }
     }
 }

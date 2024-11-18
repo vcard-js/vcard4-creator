@@ -1,9 +1,14 @@
-import type { Altid, Cardinality, CommonParameters, Group, Options, Pid, Pref, Value } from '../types.js';
-import { getInvalidPidParameterMessage, getInvalidPrefParameterMessage } from '../util/error-messages.js';
+import type { Altid, Cardinality, CommonParameters, Group, Options, Pid, Pref, PropId, Value } from '../types.js';
+import {
+    getInvalidPidParameterMessage,
+    getInvalidPrefParameterMessage,
+    getInvalidPropIdParameterMessage
+} from '../util/error-messages.js';
 import isString from '../util/is-string.js';
 import isValidGroup from '../util/is-valid-group.js';
 import isValidPidParameter from '../util/is-valid-pid-parameter.js';
 import isValidPrefParameter from '../util/is-valid-pref-parameter.js';
+import isValidPropIdParameter from '../util/is-valid-prop-id-parameter.js';
 import Property from './Property.js';
 
 export type SourceParameters = {
@@ -12,6 +17,7 @@ export type SourceParameters = {
     pref?: Pref;
     altid?: Altid;
     mediatype?: string;
+    propId?: PropId;
 } & CommonParameters;
 
 export type SourceRestConfig = [value: string, parameters?: SourceParameters, options?: Options];
@@ -91,13 +97,17 @@ export default class SourceProperty extends Property {
         throw new TypeError(`The value "${value}" is not a SourceConfig type`);
     }
 
-    static validateParameters({ pid, pref }: SourceParameters): void {
+    static validateParameters({ pid, pref, propId }: SourceParameters): void {
         if (pid !== undefined && !isValidPidParameter(pid)) {
             throw new TypeError(getInvalidPidParameterMessage({ pid }));
         }
 
         if (pref && !isValidPrefParameter(pref)) {
             throw new TypeError(getInvalidPrefParameterMessage({ pref }));
+        }
+
+        if (propId !== undefined && !isValidPropIdParameter(propId)) {
+            throw new TypeError(getInvalidPropIdParameterMessage({ propId }));
         }
     }
 }

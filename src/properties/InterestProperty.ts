@@ -6,14 +6,20 @@ import type {
     HobbyOrInterestLevel,
     Options,
     Pref,
+    PropId,
     Type,
     Value
 } from '../types.js';
-import { getInvalidIndexParameterMessage, getInvalidPrefParameterMessage } from '../util/error-messages.js';
+import {
+    getInvalidIndexParameterMessage,
+    getInvalidPrefParameterMessage,
+    getInvalidPropIdParameterMessage
+} from '../util/error-messages.js';
 import isString from '../util/is-string.js';
 import isValidGroup from '../util/is-valid-group.js';
 import isValidIndexParameter from '../util/is-valid-index-parameter.js';
 import isValidPrefParameter from '../util/is-valid-pref-parameter.js';
+import isValidPropIdParameter from '../util/is-valid-prop-id-parameter.js';
 import Property from './Property.js';
 
 export type InterestParameters = {
@@ -23,6 +29,7 @@ export type InterestParameters = {
     level?: HobbyOrInterestLevel;
     pref?: Pref;
     type?: Type;
+    propId?: PropId;
 } & CommonParameters;
 
 export type InterestRestConfig = [value: string, parameters?: InterestParameters, options?: Options];
@@ -104,13 +111,17 @@ export default class InterestProperty extends Property {
         throw new TypeError(`The value "${value}" is not a InterestConfig type`);
     }
 
-    static validateParameters({ index, pref }: InterestParameters): void {
+    static validateParameters({ index, pref, propId }: InterestParameters): void {
         if (index && !isValidIndexParameter(index)) {
             throw new TypeError(getInvalidIndexParameterMessage({ index }));
         }
 
         if (pref && !isValidPrefParameter(pref)) {
             throw new TypeError(getInvalidPrefParameterMessage({ pref }));
+        }
+
+        if (propId !== undefined && isValidPropIdParameter(propId)) {
+            throw new TypeError(getInvalidPropIdParameterMessage({ propId }));
         }
     }
 }

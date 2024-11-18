@@ -1,11 +1,14 @@
-import type { Altid, Cardinality, CommonParameters, Group, Options, Value } from '../types.js';
+import type { Altid, Cardinality, CommonParameters, Group, Options, PropId, Value } from '../types.js';
+import { getInvalidPropIdParameterMessage } from '../util/error-messages.js';
 import isString from '../util/is-string.js';
 import isValidGroup from '../util/is-valid-group.js';
+import isValidPropIdParameter from '../util/is-valid-prop-id-parameter.js';
 import Property from './Property.js';
 
 export type XmlParameters = {
     value?: Extract<Value, 'text'>;
     altid?: Altid;
+    propId?: PropId;
 } & CommonParameters;
 
 export type XmlRestConfig = [value: string, parameters?: XmlParameters, options?: Options];
@@ -71,6 +74,8 @@ export default class XmlProperty extends Property {
         if (!isValidGroup(group))
             throw new TypeError(`The group "${group}" is not a string or integer`);
 
+        XmlProperty.validateParameters(parameters);
+
         this.group = group;
         this.parameters = parameters;
         this[VALUE] = value;
@@ -88,5 +93,11 @@ export default class XmlProperty extends Property {
         if (isString(value)) return new XmlProperty(value);
 
         throw new TypeError(`The value "${value}" is not a XmlConfig type`);
+    }
+
+    static validateParameters({ propId }: XmlParameters): void {
+        if (propId !== undefined && !isValidPropIdParameter(propId)) {
+            throw new TypeError(getInvalidPropIdParameterMessage({ propId }));
+        }
     }
 }

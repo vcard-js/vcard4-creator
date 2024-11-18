@@ -1,9 +1,14 @@
-import type { Altid, Cardinality, CommonParameters, Group, Options, Pid, Pref, Type, Value } from '../types.js';
-import { getInvalidPidParameterMessage, getInvalidPrefParameterMessage } from '../util/error-messages.js';
+import type { Altid, Cardinality, CommonParameters, Group, Options, Pid, Pref, PropId, Type, Value } from '../types.js';
+import {
+    getInvalidPidParameterMessage,
+    getInvalidPrefParameterMessage,
+    getInvalidPropIdParameterMessage
+} from '../util/error-messages.js';
 import isString from '../util/is-string.js';
 import isValidGroup from '../util/is-valid-group.js';
 import isValidPidParameter from '../util/is-valid-pid-parameter.js';
 import isValidPrefParameter from '../util/is-valid-pref-parameter.js';
+import isValidPropIdParameter from '../util/is-valid-prop-id-parameter.js';
 import Property from './Property.js';
 
 export type NicknameParameters = {
@@ -13,6 +18,7 @@ export type NicknameParameters = {
     altid?: Altid;
     pid?: Pid;
     pref?: Pref;
+    propId?: PropId;
 } & CommonParameters;
 
 export type NicknameRestConfig = [value: string, parameters?: NicknameParameters, options?: Options];
@@ -83,13 +89,17 @@ export default class NicknameProperty extends Property {
         throw new TypeError(`The value "${value}" is not a NicknameConfig type`);
     }
 
-    static validateParameters({ pid, pref }: NicknameParameters): void {
+    static validateParameters({ pid, pref, propId }: NicknameParameters): void {
         if (pid !== undefined && !isValidPidParameter(pid)) {
             throw new TypeError(getInvalidPidParameterMessage({ pid }));
         }
 
         if (pref && !isValidPrefParameter(pref)) {
             throw new TypeError(getInvalidPrefParameterMessage({ pref }));
+        }
+
+        if (propId !== undefined && !isValidPropIdParameter(propId)) {
+            throw new TypeError(getInvalidPropIdParameterMessage({ propId }));
         }
     }
 }

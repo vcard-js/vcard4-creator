@@ -1,13 +1,15 @@
-import type { Altid, Cardinality, CommonParameters, Group, Options, Pid, Pref, Type, Value } from '../types.js';
+import type { Altid, Cardinality, CommonParameters, Group, Options, Pid, Pref, PropId, Type, Value } from '../types.js';
 import {
     getInvalidMediatypeValueParameterMessage,
     getInvalidPidParameterMessage,
-    getInvalidPrefParameterMessage
+    getInvalidPrefParameterMessage,
+    getInvalidPropIdParameterMessage
 } from '../util/error-messages.js';
 import isString from '../util/is-string.js';
 import isValidGroup from '../util/is-valid-group.js';
 import isValidPidParameter from '../util/is-valid-pid-parameter.js';
 import isValidPrefParameter from '../util/is-valid-pref-parameter.js';
+import isValidPropIdParameter from '../util/is-valid-prop-id-parameter.js';
 import Property from './Property.js';
 
 export type TelType = 'cell' | 'fax' | 'pager' | 'text' | 'textphone' | 'video' | 'voice';
@@ -17,6 +19,7 @@ export type TelCommonParameters = {
     pid?: Pid;
     pref?: Pref;
     altid?: Altid;
+    propId?: PropId;
 } & CommonParameters;
 
 export type TelUriValueParameters = {
@@ -147,7 +150,7 @@ export default class TelProperty extends Property {
     }
 
     static validateParameters(parameters: TelParameters): void {
-        const { mediatype, pid, pref, value } = parameters as Record<string, unknown>;
+        const { mediatype, pid, pref, propId, value } = parameters as Record<string, unknown>;
 
         if (mediatype && (!value || (isString(value) && value.toLowerCase() !== 'uri'))) {
             throw new TypeError(getInvalidMediatypeValueParameterMessage({ value }));
@@ -159,6 +162,10 @@ export default class TelProperty extends Property {
 
         if (pref && !isValidPrefParameter(pref)) {
             throw new TypeError(getInvalidPrefParameterMessage({ pref }));
+        }
+
+        if (propId !== undefined && !isValidPropIdParameter(propId)) {
+            throw new TypeError(getInvalidPropIdParameterMessage({ propId }));
         }
     }
 }

@@ -1,8 +1,21 @@
-import type { Altid, Cardinality, Cc, CommonParameters, Group, Options, Pid, Pref, Type, Value } from '../types.js';
+import type {
+    Altid,
+    Cardinality,
+    Cc,
+    CommonParameters,
+    Group,
+    Options,
+    Pid,
+    Pref,
+    PropId,
+    Type,
+    Value
+} from '../types.js';
 import {
     getInvalidCcParameterMessage,
     getInvalidPidParameterMessage,
-    getInvalidPrefParameterMessage
+    getInvalidPrefParameterMessage,
+    getInvalidPropIdParameterMessage
 } from '../util/error-messages.js';
 import getUnescapedSemicolonCount from '../util/get-unescaped-semicolon-count.js';
 import isString from '../util/is-string.js';
@@ -10,6 +23,7 @@ import isValidCcParameter from '../util/is-valid-cc-parameter.js';
 import isValidGroup from '../util/is-valid-group.js';
 import isValidPidParameter from '../util/is-valid-pid-parameter.js';
 import isValidPrefParameter from '../util/is-valid-pref-parameter.js';
+import isValidPropIdParameter from '../util/is-valid-prop-id-parameter.js';
 import Property from './Property.js';
 import { SEPARATOR } from '@vcard/vcard4-meta';
 
@@ -26,6 +40,7 @@ export type AdrParameters = {
     pref?: Pref;
     type?: Type | AdrType;
     cc?: Cc;
+    propId?: PropId;
 } & CommonParameters;
 
 export type AdrRestConfig = [value: string, parameters?: AdrParameters, options?: Options];
@@ -413,7 +428,7 @@ export default class AdrProperty extends Property {
         throw new TypeError(`The value "${value}" is not a AdrConfig type`);
     }
 
-    static validateParameters({ cc, pid, pref }: AdrParameters): void {
+    static validateParameters({ cc, pid, pref, propId }: AdrParameters): void {
         if (cc !== undefined && !isValidCcParameter(cc)) {
             throw new TypeError(getInvalidCcParameterMessage({ cc }));
         }
@@ -424,6 +439,10 @@ export default class AdrProperty extends Property {
 
         if (pref && !isValidPrefParameter(pref)) {
             throw new TypeError(getInvalidPrefParameterMessage({ pref }));
+        }
+
+        if (propId !== undefined && !isValidPropIdParameter(propId)) {
+            throw new TypeError(getInvalidPropIdParameterMessage({ propId }));
         }
     }
 }

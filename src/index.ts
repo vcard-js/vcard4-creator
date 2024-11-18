@@ -853,6 +853,7 @@ export type {
     Pref,
     PrefExclusiveTo,
     PrefInclusiveFrom,
+    PropId,
     Type,
     UppercaseAlpha,
     Value

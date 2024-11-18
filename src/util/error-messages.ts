@@ -29,3 +29,8 @@ export function getInvalidPidParameterMessage({ pid }: { pid: unknown }): string
 export function getInvalidPrefParameterMessage({ pref }: { pref: any }): string {
     return `The PREF parameter must be an integer between 1 and 100. The value ${pref} was provided`;
 }
+
+export function getInvalidPropIdParameterMessage({ propId }: { propId: unknown }): string {
+    return 'The PROP-ID parameter must be a string of size 1 to 255 octets and consisting of the letters A-Z (any ' +
+        `case), the integers 0-9, a hyphen (-), or an underscore (_). The value "${propId}" was provided`;
+}

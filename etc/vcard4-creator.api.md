@@ -21,6 +21,7 @@ export type AdrParameters = {
     pref?: Pref;
     type?: Type | AdrType;
     cc?: Cc;
+    propId?: PropId;
 } & CommonParameters;
 
 // @public
@@ -75,7 +76,7 @@ export class AdrProperty extends Property {
     // (undocumented)
     validate(value: string): void;
     // (undocumented)
-    static validateParameters({ cc, pid, pref }: AdrParameters): void;
+    static validateParameters({ cc, pid, pref, propId }: AdrParameters): void;
     // (undocumented)
     valueOf(): string;
 }
@@ -231,6 +232,7 @@ export type CaladruriParameters = {
     type?: Type;
     mediatype?: string;
     altid?: Altid;
+    propId?: PropId;
 } & CommonParameters;
 
 // @public
@@ -249,7 +251,7 @@ export class CaladruriProperty extends Property {
     // (undocumented)
     parameters: CaladruriParameters;
     // (undocumented)
-    static validateParameters({ pid, pref }: CaladruriParameters): void;
+    static validateParameters({ pid, pref, propId }: CaladruriParameters): void;
     // (undocumented)
     valueOf(): string;
 }
@@ -277,6 +279,7 @@ export type CaluriParameters = {
     type?: Type;
     mediatype?: string;
     altid?: Altid;
+    propId?: PropId;
 } & CommonParameters;
 
 // @public
@@ -295,7 +298,7 @@ export class CaluriProperty extends Property {
     // (undocumented)
     parameters: CaluriParameters;
     // (undocumented)
-    static validateParameters({ pid, pref }: CaluriParameters): void;
+    static validateParameters({ pid, pref, propId }: CaluriParameters): void;
     // (undocumented)
     valueOf(): string;
 }
@@ -322,6 +325,7 @@ export type CategoriesParameters = {
     pref?: Pref;
     type?: Type;
     altid?: Altid;
+    propId?: PropId;
 } & CommonParameters;
 
 // @public
@@ -340,7 +344,7 @@ export class CategoriesProperty extends Property {
     // (undocumented)
     parameters: CategoriesParameters;
     // (undocumented)
-    static validateParameters({ pid, pref }: CategoriesParameters): void;
+    static validateParameters({ pid, pref, propId }: CategoriesParameters): void;
     // (undocumented)
     valueOf(): string;
 }
@@ -409,6 +413,7 @@ export type ContactUriConfig = ContactUriProperty | ContactUriRestConfig | strin
 export type ContactUriParameters = {
     value?: Extract<Value, 'uri'>;
     pref?: Pref;
+    propId?: PropId;
 } & CommonParameters;
 
 // @public
@@ -427,7 +432,7 @@ export class ContactUriProperty extends Property {
     // (undocumented)
     parameters: ContactUriParameters;
     // (undocumented)
-    static validateParameters({ pref }: ContactUriParameters): void;
+    static validateParameters({ pref, propId }: ContactUriParameters): void;
     // (undocumented)
     valueOf(): string;
 }
@@ -530,6 +535,7 @@ export type EmailParameters = {
     pref?: Pref;
     type?: Type;
     altid?: Altid;
+    propId?: PropId;
 } & CommonParameters;
 
 // @public
@@ -548,7 +554,7 @@ export class EmailProperty extends Property {
     // (undocumented)
     parameters: EmailParameters;
     // (undocumented)
-    static validateParameters({ pid, pref }: EmailParameters): void;
+    static validateParameters({ pid, pref, propId }: EmailParameters): void;
     // (undocumented)
     valueOf(): string;
 }
@@ -576,6 +582,7 @@ export type ExpertiseParameters = {
     level?: ExpertiseLevel;
     pref?: Pref;
     type?: Type;
+    propId?: PropId;
 } & CommonParameters;
 
 // @public
@@ -594,7 +601,7 @@ export class ExpertiseProperty extends Property {
     // (undocumented)
     parameters: ExpertiseParameters;
     // (undocumented)
-    static validateParameters({ index, pref }: ExpertiseParameters): void;
+    static validateParameters({ index, pref, propId }: ExpertiseParameters): void;
     // (undocumented)
     valueOf(): string;
 }
@@ -619,6 +626,7 @@ export type FburlParameters = {
     type?: Type;
     mediatype?: string;
     altid?: Altid;
+    propId?: PropId;
 } & CommonParameters;
 
 // @public
@@ -637,7 +645,7 @@ export class FburlProperty extends Property {
     // (undocumented)
     parameters: FburlParameters;
     // (undocumented)
-    static validateParameters({ pid, pref }: FburlParameters): void;
+    static validateParameters({ pid, pref, propId }: FburlParameters): void;
     // (undocumented)
     valueOf(): string;
 }
@@ -662,6 +670,7 @@ export type FnParameters = {
     altid?: Altid;
     pid?: Pid;
     pref?: Pref;
+    propId?: PropId;
 } & CommonParameters;
 
 // @public
@@ -680,7 +689,7 @@ export class FnProperty extends Property {
     // (undocumented)
     parameters: FnParameters;
     // (undocumented)
-    static validateParameters({ pid, pref }: FnParameters): void;
+    static validateParameters({ pid, pref, propId }: FnParameters): void;
     // (undocumented)
     valueOf(): string;
 }
@@ -741,6 +750,7 @@ export type GeoParameters = {
     type?: Type;
     mediatype?: string;
     altid?: Altid;
+    propId?: PropId;
 } & CommonParameters;
 
 // @public
@@ -759,7 +769,7 @@ export class GeoProperty extends Property {
     // (undocumented)
     parameters: GeoParameters;
     // (undocumented)
-    static validateParameters({ pid, pref }: GeoParameters): void;
+    static validateParameters({ pid, pref, propId }: GeoParameters): void;
     // (undocumented)
     valueOf(): string;
 }
@@ -790,6 +800,7 @@ export type HobbyParameters = {
     language?: string;
     pref?: Pref;
     type?: Type;
+    propId?: PropId;
 } & CommonParameters;
 
 // @public
@@ -808,7 +819,7 @@ export class HobbyProperty extends Property {
     // (undocumented)
     parameters: HobbyParameters;
     // (undocumented)
-    static validateParameters({ index, pref }: HobbyParameters): void;
+    static validateParameters({ index, pref, propId }: HobbyParameters): void;
     // (undocumented)
     valueOf(): string;
 }
@@ -833,6 +844,7 @@ export type ImppParameters = {
     type?: Type;
     mediatype?: string;
     altid?: Altid;
+    propId?: PropId;
 } & CommonParameters;
 
 // @public
@@ -851,7 +863,7 @@ export class ImppProperty extends Property {
     // (undocumented)
     parameters: ImppParameters;
     // (undocumented)
-    static validateParameters({ pid, pref }: ImppParameters): void;
+    static validateParameters({ pid, pref, propId }: ImppParameters): void;
     // (undocumented)
     valueOf(): string;
 }
@@ -876,6 +888,7 @@ export type InterestParameters = {
     level?: HobbyOrInterestLevel;
     pref?: Pref;
     type?: Type;
+    propId?: PropId;
 } & CommonParameters;
 
 // @public
@@ -894,7 +907,7 @@ export class InterestProperty extends Property {
     // (undocumented)
     parameters: InterestParameters;
     // (undocumented)
-    static validateParameters({ index, pref }: InterestParameters): void;
+    static validateParameters({ index, pref, propId }: InterestParameters): void;
     // (undocumented)
     valueOf(): string;
 }
@@ -914,6 +927,7 @@ export type KeyCommonParameters = {
     pid?: Pid;
     pref?: Pref;
     type?: Type;
+    propId?: PropId;
 } & CommonParameters;
 
 // @public (undocumented)
@@ -1006,6 +1020,7 @@ export type LangParameters = {
     pref?: Pref;
     altid?: Altid;
     type?: Type;
+    propId?: PropId;
 } & CommonParameters;
 
 // @public
@@ -1024,7 +1039,7 @@ export class LangProperty extends Property {
     // (undocumented)
     parameters: LangParameters;
     // (undocumented)
-    static validateParameters({ pid, pref }: LangParameters): void;
+    static validateParameters({ pid, pref, propId }: LangParameters): void;
     // (undocumented)
     valueOf(): string;
 }
@@ -1050,6 +1065,7 @@ export type LogoParameters = {
     type?: Type;
     mediatype?: string;
     altid?: Altid;
+    propId?: PropId;
 } & CommonParameters;
 
 // @public
@@ -1068,7 +1084,7 @@ export class LogoProperty extends Property {
     // (undocumented)
     parameters: LogoParameters;
     // (undocumented)
-    static validateParameters({ pid, pref }: LogoParameters): void;
+    static validateParameters({ pid, pref, propId }: LogoParameters): void;
     // (undocumented)
     valueOf(): string;
 }
@@ -1092,6 +1108,7 @@ export type MemberParameters = {
     pref?: Pref;
     altid?: Altid;
     mediatype?: string;
+    propId?: PropId;
 } & CommonParameters;
 
 // @public
@@ -1110,7 +1127,7 @@ export class MemberProperty extends Property {
     // (undocumented)
     parameters: MemberParameters;
     // (undocumented)
-    static validateParameters({ pid, pref }: MemberParameters): void;
+    static validateParameters({ pid, pref, propId }: MemberParameters): void;
     // (undocumented)
     valueOf(): string;
 }
@@ -1138,6 +1155,7 @@ export type NicknameParameters = {
     altid?: Altid;
     pid?: Pid;
     pref?: Pref;
+    propId?: PropId;
 } & CommonParameters;
 
 // @public
@@ -1156,7 +1174,7 @@ export class NicknameProperty extends Property {
     // (undocumented)
     parameters: NicknameParameters;
     // (undocumented)
-    static validateParameters({ pid, pref }: NicknameParameters): void;
+    static validateParameters({ pid, pref, propId }: NicknameParameters): void;
     // (undocumented)
     valueOf(): string;
 }
@@ -1181,6 +1199,7 @@ export type NoteParameters = {
     pref?: Pref;
     type?: Type;
     altid?: Altid;
+    propId?: PropId;
 } & CommonParameters;
 
 // @public
@@ -1199,7 +1218,7 @@ export class NoteProperty extends Property {
     // (undocumented)
     parameters: NoteParameters;
     // (undocumented)
-    static validateParameters({ pid, pref }: NoteParameters): void;
+    static validateParameters({ pid, pref, propId }: NoteParameters): void;
     // (undocumented)
     valueOf(): string;
 }
@@ -1284,6 +1303,7 @@ export type OrgDirectoryParameters = {
     pid?: Pid;
     pref?: Pref;
     type?: Type;
+    propId?: PropId;
 } & CommonParameters;
 
 // @public
@@ -1302,7 +1322,7 @@ export class OrgDirectoryProperty extends Property {
     // (undocumented)
     parameters: OrgDirectoryParameters;
     // (undocumented)
-    static validateParameters({ index, pid, pref }: OrgDirectoryParameters): void;
+    static validateParameters({ index, pid, pref, propId }: OrgDirectoryParameters): void;
     // (undocumented)
     valueOf(): string;
 }
@@ -1325,6 +1345,7 @@ export type OrgParameters = {
     pref?: Pref;
     altid?: Altid;
     type?: Type;
+    propId?: PropId;
 } & CommonParameters;
 
 // @public
@@ -1343,7 +1364,7 @@ export class OrgProperty extends Property {
     // (undocumented)
     parameters: OrgParameters;
     // (undocumented)
-    static validateParameters({ pid, pref }: OrgParameters): void;
+    static validateParameters({ pid, pref, propId }: OrgParameters): void;
     // (undocumented)
     valueOf(): string;
 }
@@ -1465,6 +1486,9 @@ export abstract class Property {
 }
 
 // @public (undocumented)
+export type PropId = number | string;
+
+// @public (undocumented)
 export type RelatedCommonParameters = {
     pid?: Pid;
     pref?: Pref;
@@ -1564,6 +1588,7 @@ export type RoleParameters = {
     pref?: Pref;
     type?: Type;
     altid?: Altid;
+    propId?: PropId;
 } & CommonParameters;
 
 // @public
@@ -1582,7 +1607,7 @@ export class RoleProperty extends Property {
     // (undocumented)
     parameters: RoleParameters;
     // (undocumented)
-    static validateParameters({ pid, pref }: RoleParameters): void;
+    static validateParameters({ pid, pref, propId }: RoleParameters): void;
     // (undocumented)
     valueOf(): string;
 }
@@ -1611,6 +1636,7 @@ export type SoundParameters = {
     type?: Type;
     mediatype?: string;
     altid?: Altid;
+    propId?: PropId;
 } & CommonParameters;
 
 // @public
@@ -1629,7 +1655,7 @@ export class SoundProperty extends Property {
     // (undocumented)
     parameters: SoundParameters;
     // (undocumented)
-    static validateParameters({ pid, pref }: SoundParameters): void;
+    static validateParameters({ pid, pref, propId }: SoundParameters): void;
     // (undocumented)
     valueOf(): string;
 }
@@ -1653,6 +1679,7 @@ export type SourceParameters = {
     pref?: Pref;
     altid?: Altid;
     mediatype?: string;
+    propId?: PropId;
 } & CommonParameters;
 
 // @public
@@ -1671,7 +1698,7 @@ export class SourceProperty extends Property {
     // (undocumented)
     parameters: SourceParameters;
     // (undocumented)
-    static validateParameters({ pid, pref }: SourceParameters): void;
+    static validateParameters({ pid, pref, propId }: SourceParameters): void;
     // (undocumented)
     valueOf(): string;
 }
@@ -1691,6 +1718,7 @@ export type TelCommonParameters = {
     pid?: Pid;
     pref?: Pref;
     altid?: Altid;
+    propId?: PropId;
 } & CommonParameters;
 
 // @public (undocumented)
@@ -1753,6 +1781,7 @@ export type TitleParameters = {
     pref?: Pref;
     altid?: Altid;
     mediatype?: string;
+    propId?: PropId;
 } & CommonParameters;
 
 // @public
@@ -1771,7 +1800,7 @@ export class TitleProperty extends Property {
     // (undocumented)
     parameters: TitleParameters;
     // (undocumented)
-    static validateParameters({ pid, pref }: TitleParameters): void;
+    static validateParameters({ pid, pref, propId }: TitleParameters): void;
     // (undocumented)
     valueOf(): string;
 }
@@ -1794,6 +1823,7 @@ export type TzCommonParameters = {
     pid?: Pid;
     pref?: Pref;
     type?: Type;
+    propId?: PropId;
 } & CommonParameters;
 
 // @public (undocumented)
@@ -1887,6 +1917,7 @@ export type UrlParameters = {
     type?: Type;
     mediatype?: string;
     altid?: Altid;
+    propId?: PropId;
 } & CommonParameters;
 
 // @public
@@ -1907,7 +1938,7 @@ export class UrlProperty extends Property {
     // (undocumented)
     validate(value: string): void;
     // (undocumented)
-    static validateParameters({ pid, pref }: UrlParameters): void;
+    static validateParameters({ pid, pref, propId }: UrlParameters): void;
     // (undocumented)
     valueOf(): string;
 }
@@ -2152,6 +2183,7 @@ export type XmlConfig = XmlProperty | XmlRestConfig | string;
 export type XmlParameters = {
     value?: Extract<Value, 'text'>;
     altid?: Altid;
+    propId?: PropId;
 } & CommonParameters;
 
 // @public
@@ -2169,6 +2201,8 @@ export class XmlProperty extends Property {
     group: Group;
     // (undocumented)
     parameters: XmlParameters;
+    // (undocumented)
+    static validateParameters({ propId }: XmlParameters): void;
     // (undocumented)
     valueOf(): string;
 }

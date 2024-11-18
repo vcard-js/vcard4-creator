@@ -46,7 +46,7 @@ To-Do
         - [x] `CREATED` Parameter _(RFC 9554)_
         - [x] `DERIVED` Parameter _(RFC 9554)_
         - [ ] `PHONETIC` Parameter _(RFC 9554)_
-        - [ ] `PROP-ID` Parameter _(RFC 9554)_
+        - [x] `PROP-ID` Parameter _(RFC 9554)_
         - [ ] `SCRIPT` Parameter _(RFC 9554)_
         - [x] Additional Address Components _(RFC 9554)_
         - [x] Billing Address Type Value _(RFC 9554)_
@@ -96,7 +96,7 @@ To-Do
         - [x] `AUTHOR-NAME` Parameter _(RFC 9554)_
         - [x] `CREATED` Parameter _(RFC 9554)_
         - [x] `DERIVED` Parameter _(RFC 9554)_
-        - [ ] `PROP-ID` Parameter _(RFC 9554)_
+        - [x] `PROP-ID` Parameter _(RFC 9554)_
     - [x] `CALURI`
         - [x] Line Folding
         - [x] Value Escaping
@@ -110,7 +110,7 @@ To-Do
         - [x] `AUTHOR-NAME` Parameter _(RFC 9554)_
         - [x] `CREATED` Parameter _(RFC 9554)_
         - [x] `DERIVED` Parameter _(RFC 9554)_
-        - [ ] `PROP-ID` Parameter _(RFC 9554)_
+        - [x] `PROP-ID` Parameter _(RFC 9554)_
     - [x] `CATEGORIES`
         - [x] Line Folding
         - [x] Value Escaping
@@ -123,7 +123,7 @@ To-Do
         - [x] `AUTHOR-NAME` Parameter _(RFC 9554)_
         - [x] `CREATED` Parameter _(RFC 9554)_
         - [x] `DERIVED` Parameter _(RFC 9554)_
-        - [ ] `PROP-ID` Parameter _(RFC 9554)_
+        - [x] `PROP-ID` Parameter _(RFC 9554)_
     - [x] `CLIENTPIDMAP`
         - [x] Line Folding
         - [x] Value Escaping
@@ -139,7 +139,7 @@ To-Do
         - [x] `AUTHOR-NAME` Parameter _(RFC 9554)_
         - [x] `CREATED` Parameter _(RFC 9554)_
         - [x] `DERIVED` Parameter _(RFC 9554)_
-        - [ ] `PROP-ID` Parameter _(RFC 9554)_
+        - [x] `PROP-ID` Parameter _(RFC 9554)_
     - [ ] `CREATED` _(RFC 9554)_
         - [ ] Line Folding
         - [ ] Value Escaping
@@ -181,7 +181,7 @@ To-Do
         - [x] `AUTHOR-NAME` Parameter _(RFC 9554)_
         - [x] `CREATED` Parameter _(RFC 9554)_
         - [x] `DERIVED` Parameter _(RFC 9554)_
-        - [ ] `PROP-ID` Parameter _(RFC 9554)_
+        - [x] `PROP-ID` Parameter _(RFC 9554)_
     - [x] `END`
         - [x] No Parameters
     - [x] `EXPERTISE` _(RFC6715)_
@@ -197,7 +197,7 @@ To-Do
         - [x] `AUTHOR-NAME` Parameter _(RFC 9554)_
         - [x] `CREATED` Parameter _(RFC 9554)_
         - [x] `DERIVED` Parameter _(RFC 9554)_
-        - [ ] `PROP-ID` Parameter _(RFC 9554)_
+        - [x] `PROP-ID` Parameter _(RFC 9554)_
     - [x] `FBURL`
         - [x] Line Folding
         - [x] Value Escaping
@@ -210,7 +210,7 @@ To-Do
         - [x] `AUTHOR-NAME` Parameter _(RFC 9554)_
         - [x] `CREATED` Parameter _(RFC 9554)_
         - [x] `DERIVED` Parameter _(RFC 9554)_
-        - [ ] `PROP-ID` Parameter _(RFC 9554)_
+        - [x] `PROP-ID` Parameter _(RFC 9554)_
     - [x] `FN`
         - [x] Line Folding
         - [x] Value Escaping
@@ -224,7 +224,7 @@ To-Do
         - [x] `AUTHOR-NAME` Parameter _(RFC 9554)_
         - [x] `CREATED` Parameter _(RFC 9554)_
         - [x] `DERIVED` Parameter _(RFC 9554)_
-        - [ ] `PROP-ID` Parameter _(RFC 9554)_
+        - [x] `PROP-ID` Parameter _(RFC 9554)_
     - [x] `GENDER`
         - [x] Line Folding
         - [x] Value Escaping
@@ -246,7 +246,7 @@ To-Do
         - [x] `AUTHOR-NAME` Parameter _(RFC 9554)_
         - [x] `CREATED` Parameter _(RFC 9554)_
         - [x] `DERIVED` Parameter _(RFC 9554)_
-        - [ ] `PROP-ID` Parameter _(RFC 9554)_
+        - [x] `PROP-ID` Parameter _(RFC 9554)_
     - [ ] `GRAMGENDER` Parameter _(RFC 9554)_
         - [ ] Line Folding
         - [ ] Value Escaping
@@ -269,7 +269,7 @@ To-Do
         - [x] `AUTHOR-NAME` Parameter _(RFC 9554)_
         - [x] `CREATED` Parameter _(RFC 9554)_
         - [x] `DERIVED` Parameter _(RFC 9554)_
-        - [ ] `PROP-ID` Parameter _(RFC 9554)_
+        - [x] `PROP-ID` Parameter _(RFC 9554)_
     - [x] `IMPP`
         - [x] Line Folding
         - [x] Value Escaping
@@ -283,7 +283,7 @@ To-Do
         - [x] `AUTHOR-NAME` Parameter _(RFC 9554)_
         - [x] `CREATED` Parameter _(RFC 9554)_
         - [x] `DERIVED` Parameter _(RFC 9554)_
-        - [ ] `PROP-ID` Parameter _(RFC 9554)_
+        - [x] `PROP-ID` Parameter _(RFC 9554)_
         - [ ] `SERVICE-TYPE` Parameter _(RFC 9554)_
         - [ ] `USERNAME` Parameter _(RFC 9554)_
     - [x] `INTEREST` _(RFC6715)_
@@ -299,7 +299,7 @@ To-Do
         - [x] `AUTHOR-NAME` Parameter _(RFC 9554)_
         - [x] `CREATED` Parameter _(RFC 9554)_
         - [x] `DERIVED` Parameter _(RFC 9554)_
-        - [ ] `PROP-ID` Parameter _(RFC 9554)_
+        - [x] `PROP-ID` Parameter _(RFC 9554)_
     - [x] `KEY`
         - [x] Line Folding
         - [x] Value Escaping
@@ -313,7 +313,7 @@ To-Do
         - [x] `AUTHOR-NAME` Parameter _(RFC 9554)_
         - [x] `CREATED` Parameter _(RFC 9554)_
         - [x] `DERIVED` Parameter _(RFC 9554)_
-        - [ ] `PROP-ID` Parameter _(RFC 9554)_
+        - [x] `PROP-ID` Parameter _(RFC 9554)_
     - [x] `KIND`
         - [x] Line Folding
         - [x] Value Escaping
@@ -334,7 +334,7 @@ To-Do
         - [x] `AUTHOR-NAME` Parameter _(RFC 9554)_
         - [x] `CREATED` Parameter _(RFC 9554)_
         - [x] `DERIVED` Parameter _(RFC 9554)_
-        - [ ] `PROP-ID` Parameter _(RFC 9554)_
+        - [x] `PROP-ID` Parameter _(RFC 9554)_
     - [ ] `LANGUAGE` _(RFC 9554)_
         - [ ] No Parameters
     - [x] `LOGO`
@@ -351,7 +351,7 @@ To-Do
         - [x] `AUTHOR-NAME` Parameter _(RFC 9554)_
         - [x] `CREATED` Parameter _(RFC 9554)_
         - [x] `DERIVED` Parameter _(RFC 9554)_
-        - [ ] `PROP-ID` Parameter _(RFC 9554)_
+        - [x] `PROP-ID` Parameter _(RFC 9554)_
     - [x] `MEMBER`
         - [x] Line Folding
         - [x] Value Escaping
@@ -364,7 +364,7 @@ To-Do
         - [x] `AUTHOR-NAME` Parameter _(RFC 9554)_
         - [x] `CREATED` Parameter _(RFC 9554)_
         - [x] `DERIVED` Parameter _(RFC 9554)_
-        - [ ] `PROP-ID` Parameter _(RFC 9554)_
+        - [x] `PROP-ID` Parameter _(RFC 9554)_
     - [x] `N`
         - [x] Line Folding
         - [x] Value Escaping
@@ -392,7 +392,7 @@ To-Do
         - [x] `AUTHOR-NAME` Parameter _(RFC 9554)_
         - [x] `CREATED` Parameter _(RFC 9554)_
         - [x] `DERIVED` Parameter _(RFC 9554)_
-        - [ ] `PROP-ID` Parameter _(RFC 9554)_
+        - [x] `PROP-ID` Parameter _(RFC 9554)_
     - [x] `NOTE`
         - [x] Line Folding
         - [x] Value Escaping
@@ -406,7 +406,7 @@ To-Do
         - [x] `AUTHOR-NAME` Parameter _(RFC 9554)_
         - [x] `CREATED` Parameter _(RFC 9554)_
         - [x] `DERIVED` Parameter _(RFC 9554)_
-        - [ ] `PROP-ID` Parameter _(RFC 9554)_
+        - [x] `PROP-ID` Parameter _(RFC 9554)_
     - [x] `ORG`
         - [x] Line Folding
         - [x] Value Escaping
@@ -421,7 +421,7 @@ To-Do
         - [x] `AUTHOR-NAME` Parameter _(RFC 9554)_
         - [x] `CREATED` Parameter _(RFC 9554)_
         - [x] `DERIVED` Parameter _(RFC 9554)_
-        - [ ] `PROP-ID` Parameter _(RFC 9554)_
+        - [x] `PROP-ID` Parameter _(RFC 9554)_
     - [x] `ORG-DIRECTORY` _(RFC6715)_
         - [x] Line Folding
         - [x] Value Escaping
@@ -435,7 +435,7 @@ To-Do
         - [x] `AUTHOR-NAME` Parameter _(RFC 9554)_
         - [x] `CREATED` Parameter _(RFC 9554)_
         - [x] `DERIVED` Parameter _(RFC 9554)_
-        - [ ] `PROP-ID` Parameter _(RFC 9554)_
+        - [x] `PROP-ID` Parameter _(RFC 9554)_
     - [x] `PHOTO`
         - [x] Line Folding
         - [x] Value Escaping
@@ -506,7 +506,7 @@ To-Do
         - [x] `AUTHOR-NAME` Parameter _(RFC 9554)_
         - [x] `CREATED` Parameter _(RFC 9554)_
         - [x] `DERIVED` Parameter _(RFC 9554)_
-        - [ ] `PROP-ID` Parameter _(RFC 9554)_
+        - [x] `PROP-ID` Parameter _(RFC 9554)_
     - [ ] `SOCIALPROFILE` _(RFC 9554)_
         - [ ] Line Folding
         - [ ] Value Escaping
@@ -531,7 +531,7 @@ To-Do
         - [x] `AUTHOR-NAME` Parameter _(RFC 9554)_
         - [x] `CREATED` Parameter _(RFC 9554)_
         - [x] `DERIVED` Parameter _(RFC 9554)_
-        - [ ] `PROP-ID` Parameter _(RFC 9554)_
+        - [x] `PROP-ID` Parameter _(RFC 9554)_
     - [x] `SOURCE`
         - [x] Line Folding
         - [x] Value Escaping
@@ -544,7 +544,7 @@ To-Do
         - [x] `AUTHOR-NAME` Parameter _(RFC 9554)_
         - [x] `CREATED` Parameter _(RFC 9554)_
         - [x] `DERIVED` Parameter _(RFC 9554)_
-        - [ ] `PROP-ID` Parameter _(RFC 9554)_
+        - [x] `PROP-ID` Parameter _(RFC 9554)_
     - [x] `TEL`
         - [x] Line Folding
         - [x] Value Escaping
@@ -558,7 +558,7 @@ To-Do
         - [x] `AUTHOR-NAME` Parameter _(RFC 9554)_
         - [x] `CREATED` Parameter _(RFC 9554)_
         - [x] `DERIVED` Parameter _(RFC 9554)_
-        - [ ] `PROP-ID` Parameter _(RFC 9554)_
+        - [x] `PROP-ID` Parameter _(RFC 9554)_
     - [x] `TITLE`
         - [x] Line Folding
         - [x] Value Escaping
@@ -572,7 +572,7 @@ To-Do
         - [x] `AUTHOR-NAME` Parameter _(RFC 9554)_
         - [x] `CREATED` Parameter _(RFC 9554)_
         - [x] `DERIVED` Parameter _(RFC 9554)_
-        - [ ] `PROP-ID` Parameter _(RFC 9554)_
+        - [x] `PROP-ID` Parameter _(RFC 9554)_
     - [x] `TZ`
         - [x] Line Folding
         - [x] Value Escaping
@@ -586,7 +586,7 @@ To-Do
         - [x] `AUTHOR-NAME` Parameter _(RFC 9554)_
         - [x] `CREATED` Parameter _(RFC 9554)_
         - [x] `DERIVED` Parameter _(RFC 9554)_
-        - [ ] `PROP-ID` Parameter _(RFC 9554)_
+        - [x] `PROP-ID` Parameter _(RFC 9554)_
     - [x] `UID`
         - [x] Line Folding
         - [x] Value Escaping
@@ -608,7 +608,7 @@ To-Do
         - [x] `AUTHOR-NAME` Parameter _(RFC 9554)_
         - [x] `CREATED` Parameter _(RFC 9554)_
         - [x] `DERIVED` Parameter _(RFC 9554)_
-        - [ ] `PROP-ID` Parameter _(RFC 9554)_
+        - [x] `PROP-ID` Parameter _(RFC 9554)_
     - [x] `VERSION`
         - [x] No Parameters
     - [x] `XML`
@@ -620,7 +620,7 @@ To-Do
         - [x] `AUTHOR-NAME` Parameter _(RFC 9554)_
         - [x] `CREATED` Parameter _(RFC 9554)_
         - [x] `DERIVED` Parameter _(RFC 9554)_
-        - [ ] `PROP-ID` Parameter _(RFC 9554)_
+        - [x] `PROP-ID` Parameter _(RFC 9554)_
 - [x] Implement Parameter Value Encoding as Specified in [RFC6868](https://datatracker.ietf.org/doc/html/rfc6868)
 - [x] Implement Property Grouping As Specified In [RFC6350 § 3.3](https://www.rfc-editor.org/rfc/rfc6350.html#section-3.3)
 
