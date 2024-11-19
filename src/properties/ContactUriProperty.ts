@@ -91,7 +91,7 @@ export default class ContactUriProperty extends Property {
     }
 
     static validateParameters({ pref, propId }: ContactUriParameters): void {
-        if (pref && !isValidPrefParameter(pref)) {
+        if (pref !== undefined && !isValidPrefParameter(pref)) {
             throw new TypeError(getInvalidPrefParameterMessage({ pref }));
         }
 

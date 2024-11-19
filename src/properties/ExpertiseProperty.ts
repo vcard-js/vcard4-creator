@@ -99,7 +99,7 @@ export default class ExpertiseProperty extends Property {
             throw new TypeError(getInvalidIndexParameterMessage({ index }));
         }
 
-        if (pref && !isValidPrefParameter(pref)) {
+        if (pref !== undefined && !isValidPrefParameter(pref)) {
             throw new TypeError(getInvalidPrefParameterMessage({ pref }));
         }
 

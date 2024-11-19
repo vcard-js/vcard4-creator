@@ -127,7 +127,7 @@ export default class TzProperty extends Property {
             throw new TypeError(getInvalidPidParameterMessage({ pid }));
         }
 
-        if (pref && !isValidPrefParameter(pref)) {
+        if (pref !== undefined && !isValidPrefParameter(pref)) {
             throw new TypeError(getInvalidPrefParameterMessage({ pref }));
         }
 
