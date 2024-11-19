@@ -11,11 +11,13 @@ import isValidPrefParameter from '../util/is-valid-pref-parameter.js';
 import isValidPropIdParameter from '../util/is-valid-prop-id-parameter.js';
 import Property from './Property.js';
 
+export type ImppType = 'business' | 'mobile' | 'personal' | 'pref';
+
 export type ImppParameters = {
     value?: Extract<Value, 'uri'>;
     pid?: Pid;
     pref?: Pref;
-    type?: Type;
+    type?: Type | ImppType | (Type | ImppType)[];
     mediatype?: string;
     altid?: Altid;
     propId?: PropId;
