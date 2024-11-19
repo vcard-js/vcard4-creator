@@ -1,14 +1,16 @@
-import type { Altid, Cardinality, CommonParameters, Group, Options, Pid, Pref, Value } from '../types.js';
+import type { Altid, Cardinality, CommonParameters, Group, Options, Pid, Pref, PropId, Value } from '../types.js';
 import {
     getInvalidLanguageValueParameterMessage,
     getInvalidMediatypeValueParameterMessage,
     getInvalidPidParameterMessage,
-    getInvalidPrefParameterMessage
+    getInvalidPrefParameterMessage,
+    getInvalidPropIdParameterMessage
 } from '../util/error-messages.js';
 import isString from '../util/is-string.js';
 import isValidGroup from '../util/is-valid-group.js';
 import isValidPidParameter from '../util/is-valid-pid-parameter.js';
 import isValidPrefParameter from '../util/is-valid-pref-parameter.js';
+import isValidPropIdParameter from '../util/is-valid-prop-id-parameter.js';
 import Property from './Property.js';
 
 export type RelatedType = 'acquaintance'
@@ -37,6 +39,7 @@ export type RelatedCommonParameters = {
     pref?: Pref;
     altid?: Altid;
     type?: RelatedType;
+    propId?: PropId;
 } & CommonParameters;
 
 export type RelatedUriOrUndefinedValueParameters = {
@@ -149,7 +152,7 @@ export default class RelatedProperty extends Property {
     }
 
     static validateParameters(parameters: RelatedParameters): void {
-        const { language, mediatype, pid, pref, value } = parameters as Record<string, unknown>;
+        const { language, mediatype, pid, pref, propId, value } = parameters as Record<string, unknown>;
 
         if (language && (!value || (isString(value) && value.toLowerCase() !== 'text'))) {
             throw new TypeError(getInvalidLanguageValueParameterMessage({ value }));
@@ -165,6 +168,10 @@ export default class RelatedProperty extends Property {
 
         if (pref !== undefined && !isValidPrefParameter(pref)) {
             throw new TypeError(getInvalidPrefParameterMessage({ pref }));
+        }
+
+        if (propId !== undefined && !isValidPropIdParameter(propId)) {
+            throw new TypeError(getInvalidPropIdParameterMessage({ propId }));
         }
     }
 }

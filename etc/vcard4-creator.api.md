@@ -1389,6 +1389,7 @@ export type PhotoParameters = {
     mediatype?: string;
     pref?: Pref;
     pid?: Pid;
+    propId?: PropId;
 } & CommonParameters;
 
 // @public
@@ -1409,7 +1410,7 @@ export class PhotoProperty extends Property {
     // (undocumented)
     validate(value: string): void;
     // (undocumented)
-    static validateParameters({ pid, pref }: PhotoParameters): void;
+    static validateParameters({ pid, pref, propId }: PhotoParameters): void;
     // (undocumented)
     valueOf(): string;
 }
@@ -1494,6 +1495,7 @@ export type RelatedCommonParameters = {
     pref?: Pref;
     altid?: Altid;
     type?: RelatedType;
+    propId?: PropId;
 } & CommonParameters;
 
 // @public (undocumented)
