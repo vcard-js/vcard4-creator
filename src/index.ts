@@ -85,7 +85,7 @@ import GenderProperty, {
 } from './properties/GenderProperty.js';
 import GeoProperty, { type GeoConfig, GeoParameters, GeoRestConfig } from './properties/GeoProperty.js';
 import HobbyProperty, { type HobbyConfig, HobbyParameters, HobbyRestConfig } from './properties/HobbyProperty.js';
-import ImppProperty, { type ImppConfig, ImppParameters, ImppRestConfig, ImppType } from './properties/ImppProperty.js';
+import ImppProperty, { type ImppConfig, ImppParameters, ImppRestConfig } from './properties/ImppProperty.js';
 import InterestProperty, {
     type InterestConfig, InterestParameters, InterestRestConfig
 } from './properties/InterestProperty.js';
@@ -701,7 +701,6 @@ export type {
     ImppProperty,
     ImppPropertyArray,
     ImppRestConfig,
-    ImppType,
     InterestConfig,
     InterestParameters,
     InterestProperty,

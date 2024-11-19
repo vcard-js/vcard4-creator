@@ -841,7 +841,7 @@ export type ImppParameters = {
     value?: Extract<Value, 'uri'>;
     pid?: Pid;
     pref?: Pref;
-    type?: Type | ImppType | (Type | ImppType)[];
+    type?: Type;
     mediatype?: string;
     altid?: Altid;
     propId?: PropId;
@@ -876,9 +876,6 @@ export class ImppPropertyArray extends Array {
 
 // @public (undocumented)
 export type ImppRestConfig = [value: string, parameters?: ImppParameters, options?: Options];
-
-// @public (undocumented)
-export type ImppType = 'business' | 'mobile' | 'personal' | 'pref';
 
 // @public (undocumented)
 export type InterestConfig = InterestProperty | InterestRestConfig | string;
