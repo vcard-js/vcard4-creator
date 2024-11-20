@@ -845,6 +845,8 @@ export type ImppParameters = {
     mediatype?: string;
     altid?: Altid;
     propId?: PropId;
+    serviceType?: string;
+    username?: string;
 } & CommonParameters;
 
 // @public

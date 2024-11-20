@@ -284,8 +284,8 @@ To-Do
         - [x] `CREATED` Parameter _(RFC 9554)_
         - [x] `DERIVED` Parameter _(RFC 9554)_
         - [x] `PROP-ID` Parameter _(RFC 9554)_
-        - [ ] `SERVICE-TYPE` Parameter _(RFC 9554)_
-        - [ ] `USERNAME` Parameter _(RFC 9554)_
+        - [x] `SERVICE-TYPE` Parameter _(RFC 9554)_
+        - [x] `USERNAME` Parameter _(RFC 9554)_
     - [x] `INTEREST` _(RFC6715)_
         - [x] Line Folding
         - [x] Value Escaping

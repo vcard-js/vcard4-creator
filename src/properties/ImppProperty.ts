@@ -19,6 +19,8 @@ export type ImppParameters = {
     mediatype?: string;
     altid?: Altid;
     propId?: PropId;
+    serviceType?: string;
+    username?: string;
 } & CommonParameters;
 
 export type ImppRestConfig = [value: string, parameters?: ImppParameters, options?: Options];
