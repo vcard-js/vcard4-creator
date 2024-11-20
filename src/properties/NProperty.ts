@@ -1,7 +1,9 @@
-import type { Altid, Cardinality, CommonParameters, Group, Options, Value } from '../types.js';
+import type { Altid, Cardinality, CommonParameters, Group, Options, Phonetic, Value } from '../types.js';
+import { getInvalidScriptParameterMessage } from '../util/error-messages.js';
 import getUnescapedSemicolonCount from '../util/get-unescaped-semicolon-count.js';
 import isString from '../util/is-string.js';
 import isValidGroup from '../util/is-valid-group.js';
+import isValidScriptParameter from '../util/is-valid-script-parameter.js';
 import Property from './Property.js';
 
 export type NParameters = {
@@ -9,6 +11,8 @@ export type NParameters = {
     sortAs?: string;
     language?: string;
     altid?: Altid;
+    phonetic?: Phonetic;
+    script?: string;
 } & CommonParameters;
 
 export type NRestConfig = [value: string, parameters?: NParameters, options?: Options];
@@ -186,6 +190,7 @@ export default class NProperty extends Property {
             throw new TypeError(`The group "${group}" is not a string or integer`);
 
         this.validate(value);
+        NProperty.validateParameters(parameters);
 
         this.group = group;
         this.parameters = parameters;
@@ -215,5 +220,11 @@ export default class NProperty extends Property {
         if (isString(value)) return new NProperty(value);
 
         throw new TypeError(`The value "${value}" is not a NConfig type`);
+    }
+
+    static validateParameters({ script }: NParameters): void {
+        if (script !== undefined && !isValidScriptParameter(script)) {
+            throw new TypeError(getInvalidScriptParameterMessage({ script }));
+        }
     }
 }

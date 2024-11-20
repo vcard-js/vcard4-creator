@@ -1242,6 +1242,8 @@ export type NParameters = {
     sortAs?: string;
     language?: string;
     altid?: Altid;
+    phonetic?: Phonetic;
+    script?: string;
 } & CommonParameters;
 
 // @public
@@ -1272,6 +1274,8 @@ export class NProperty extends Property {
     get secondarySurname(): string;
     // (undocumented)
     validate(value: string): void;
+    // (undocumented)
+    static validateParameters({ script }: NParameters): void;
     // (undocumented)
     valueOf(): string;
 }

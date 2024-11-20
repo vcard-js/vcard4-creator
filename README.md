@@ -374,8 +374,8 @@ To-Do
         - [x] `AUTHOR-NAME` Parameter _(RFC 9554)_
         - [x] `CREATED` Parameter _(RFC 9554)_
         - [x] `DERIVED` Parameter _(RFC 9554)_
-        - [ ] `PHONETIC` Parameter _(RFC 9554)_
-        - [ ] `SCRIPT` Parameter _(RFC 9554)_
+        - [x] `PHONETIC` Parameter _(RFC 9554)_
+        - [x] `SCRIPT` Parameter _(RFC 9554)_
         - [x] Additional Name Components _(RFC 9554)_
     - [x] `NICKNAME`
         - [x] Line Folding
