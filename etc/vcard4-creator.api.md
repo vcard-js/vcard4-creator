@@ -22,6 +22,7 @@ export type AdrParameters = {
     type?: Type | AdrType;
     cc?: Cc;
     propId?: PropId;
+    phonetic?: Phonetic;
 } & CommonParameters;
 
 // @public
@@ -1379,6 +1380,9 @@ export class OrgPropertyArray extends Array {
 
 // @public (undocumented)
 export type OrgRestConfig = [value: string, parameters?: OrgParameters, options?: Options];
+
+// @public (undocumented)
+export type Phonetic = 'ipa' | 'jyut' | 'piny' | 'script';
 
 // @public (undocumented)
 export type PhotoConfig = PhotoProperty | PhotoRestConfig | string;

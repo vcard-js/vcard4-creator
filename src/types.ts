@@ -12,6 +12,7 @@ export type CommonParameters = {
 export type Cc = `${UppercaseAlpha}${UppercaseAlpha}`;
 export type Group = number | string;
 export type HobbyOrInterestLevel = 'low' | 'medium' | 'high';
+export type Phonetic = 'ipa' | 'jyut' | 'piny' | 'script';
 export type Pid = number | number[];
 export type PrefInclusiveFrom = 1;
 export type PrefExclusiveTo = 101;

@@ -849,6 +849,7 @@ export type {
     Group,
     HobbyOrInterestLevel,
     Options,
+    Phonetic,
     Pid,
     Pref,
     PrefExclusiveTo,

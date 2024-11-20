@@ -5,6 +5,7 @@ import type {
     CommonParameters,
     Group,
     Options,
+    Phonetic,
     Pid,
     Pref,
     PropId,
@@ -41,6 +42,7 @@ export type AdrParameters = {
     type?: Type | AdrType;
     cc?: Cc;
     propId?: PropId;
+    phonetic?: Phonetic;
 } & CommonParameters;
 
 export type AdrRestConfig = [value: string, parameters?: AdrParameters, options?: Options];
