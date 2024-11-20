@@ -47,7 +47,7 @@ To-Do
         - [x] `DERIVED` Parameter _(RFC 9554)_
         - [x] `PHONETIC` Parameter _(RFC 9554)_
         - [x] `PROP-ID` Parameter _(RFC 9554)_
-        - [ ] `SCRIPT` Parameter _(RFC 9554)_
+        - [x] `SCRIPT` Parameter _(RFC 9554)_
         - [x] Additional Address Components _(RFC 9554)_
         - [x] Billing Address Type Value _(RFC 9554)_
         - [x] Delivery Address Type Value _(RFC 9554)_

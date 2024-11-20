@@ -34,3 +34,8 @@ export function getInvalidPropIdParameterMessage({ propId }: { propId: unknown }
     return 'The PROP-ID parameter must be a string of size 1 to 255 octets and consisting of the letters A-Z (any ' +
         `case), the integers 0-9, a hyphen (-), or an underscore (_). The value "${propId}" was provided`;
 }
+
+export function getInvalidScriptParameterMessage({ script }: { script: unknown }): string {
+    return 'The SCRIPT parameter must be a 4 alpha character string and be a script subtag as defined in RFC 5646. ' +
+        `The value "${script}" was provided`;
+}

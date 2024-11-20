@@ -16,7 +16,8 @@ import {
     getInvalidCcParameterMessage,
     getInvalidPidParameterMessage,
     getInvalidPrefParameterMessage,
-    getInvalidPropIdParameterMessage
+    getInvalidPropIdParameterMessage,
+    getInvalidScriptParameterMessage
 } from '../util/error-messages.js';
 import getUnescapedSemicolonCount from '../util/get-unescaped-semicolon-count.js';
 import isString from '../util/is-string.js';
@@ -25,6 +26,7 @@ import isValidGroup from '../util/is-valid-group.js';
 import isValidPidParameter from '../util/is-valid-pid-parameter.js';
 import isValidPrefParameter from '../util/is-valid-pref-parameter.js';
 import isValidPropIdParameter from '../util/is-valid-prop-id-parameter.js';
+import isValidScriptParameter from '../util/is-valid-script-parameter.js';
 import Property from './Property.js';
 import { SEPARATOR } from '@vcard/vcard4-meta';
 
@@ -43,6 +45,7 @@ export type AdrParameters = {
     cc?: Cc;
     propId?: PropId;
     phonetic?: Phonetic;
+    script?: string;
 } & CommonParameters;
 
 export type AdrRestConfig = [value: string, parameters?: AdrParameters, options?: Options];
@@ -430,7 +433,7 @@ export default class AdrProperty extends Property {
         throw new TypeError(`The value "${value}" is not a AdrConfig type`);
     }
 
-    static validateParameters({ cc, pid, pref, propId }: AdrParameters): void {
+    static validateParameters({ cc, pid, pref, propId, script }: AdrParameters): void {
         if (cc !== undefined && !isValidCcParameter(cc)) {
             throw new TypeError(getInvalidCcParameterMessage({ cc }));
         }
@@ -445,6 +448,10 @@ export default class AdrProperty extends Property {
 
         if (propId !== undefined && !isValidPropIdParameter(propId)) {
             throw new TypeError(getInvalidPropIdParameterMessage({ propId }));
+        }
+
+        if (script !== undefined && !isValidScriptParameter(script)) {
+            throw new TypeError(getInvalidScriptParameterMessage({ script }));
         }
     }
 }

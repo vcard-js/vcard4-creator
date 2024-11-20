@@ -23,6 +23,7 @@ export type AdrParameters = {
     cc?: Cc;
     propId?: PropId;
     phonetic?: Phonetic;
+    script?: string;
 } & CommonParameters;
 
 // @public
@@ -77,7 +78,7 @@ export class AdrProperty extends Property {
     // (undocumented)
     validate(value: string): void;
     // (undocumented)
-    static validateParameters({ cc, pid, pref, propId }: AdrParameters): void;
+    static validateParameters({ cc, pid, pref, propId, script }: AdrParameters): void;
     // (undocumented)
     valueOf(): string;
 }
