@@ -128,8 +128,6 @@ To-Do
         - [x] Line Folding
         - [x] Value Escaping
         - [x] No Parameters
-        - [x] No `VALUE` Parameter
-        - [ ] `PROP-ID` Parameter? _(RFC 9554)_
     - [x] `CONTACT-URI` _(RFC8605)_
         - [x] Line Folding
         - [x] Value Escaping
