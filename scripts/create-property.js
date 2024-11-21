@@ -39,7 +39,7 @@ console.log(`Created: ${propertyFilepath}`);
 
 const specSrc = renderTemplate('Property.spec.ts.hbs', { property });
 const specFilename = `${pascalCase(property)}Property.spec.ts`;
-const specFilepath = path.resolve(__dirname, '..', 'test', 'properties', specFilename);
+const specFilepath = path.resolve(__dirname, '..', 'spec', 'properties', specFilename);
 
 fs.writeFileSync(specFilepath, specSrc);
 
@@ -60,7 +60,7 @@ const propertyArraySpecFilename = `${pascalCase(property)}PropertyArray.spec.ts`
 const propertyArraySpecFilepath = path.resolve(
     __dirname,
     '..',
-    'test',
+    'spec',
     'properties',
     'arrays',
     propertyArraySpecFilename
