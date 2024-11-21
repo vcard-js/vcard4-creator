@@ -449,6 +449,36 @@ export class ContactUriPropertyArray extends Array {
 export type ContactUriRestConfig = [value: string, parameters?: ContactUriParameters, options?: Options];
 
 // @public (undocumented)
+export type CreatedConfig = CreatedProperty | CreatedRestConfig | string;
+
+// @public (undocumented)
+export type CreatedParameters = {
+    value?: Extract<Value, 'timestamp'>;
+};
+
+// @public
+export class CreatedProperty extends Property {
+    // (undocumented)
+    [VALUE_10]: string;
+    constructor(value: string, parameters?: CreatedParameters, { group }?: Options);
+    // (undocumented)
+    static readonly CARDINALITY: Cardinality;
+    // (undocumented)
+    static readonly DEFAULT_VALUE_TYPE: Value;
+    // (undocumented)
+    static from(value: CreatedConfig): CreatedProperty;
+    // (undocumented)
+    group: Group;
+    // (undocumented)
+    parameters: CreatedParameters;
+    // (undocumented)
+    valueOf(): string;
+}
+
+// @public (undocumented)
+export type CreatedRestConfig = [value: string, parameters?: CreatedParameters, options?: Options];
+
+// @public (undocumented)
 export type DeathdateCommonParameters = {
     altid?: Altid;
 } & CommonParameters;
@@ -468,7 +498,7 @@ export type DeathdateParameters = DeathdateDateAndOrTimeOrUndefinedValueParamete
 // @public
 export class DeathdateProperty extends Property {
     // (undocumented)
-    [VALUE_10]: string;
+    [VALUE_11]: string;
     constructor(value: string, parameters?: DeathdateParameters, { group }?: Options);
     // (undocumented)
     static readonly CARDINALITY: Cardinality;
@@ -508,7 +538,7 @@ export type DeathplaceParameters = {
 // @public
 export class DeathplaceProperty extends Property {
     // (undocumented)
-    [VALUE_11]: string;
+    [VALUE_12]: string;
     constructor(value: string, parameters?: DeathplaceParameters, { group }?: Options);
     // (undocumented)
     static readonly CARDINALITY: Cardinality;
@@ -543,7 +573,7 @@ export type EmailParameters = {
 // @public
 export class EmailProperty extends Property {
     // (undocumented)
-    [VALUE_12]: string;
+    [VALUE_13]: string;
     constructor(value: string, parameters?: EmailParameters, { group }?: Options);
     // (undocumented)
     static readonly CARDINALITY: Cardinality;
@@ -590,7 +620,7 @@ export type ExpertiseParameters = {
 // @public
 export class ExpertiseProperty extends Property {
     // (undocumented)
-    [VALUE_13]: string;
+    [VALUE_14]: string;
     constructor(value: string, parameters?: ExpertiseParameters, { group }?: Options);
     // (undocumented)
     static readonly CARDINALITY: Cardinality;
@@ -634,7 +664,7 @@ export type FburlParameters = {
 // @public
 export class FburlProperty extends Property {
     // (undocumented)
-    [VALUE_14]: string;
+    [VALUE_15]: string;
     constructor(value: string, parameters?: FburlParameters, { group }?: Options);
     // (undocumented)
     static readonly CARDINALITY: Cardinality;
@@ -678,7 +708,7 @@ export type FnParameters = {
 // @public
 export class FnProperty extends Property {
     // (undocumented)
-    [VALUE_15]: string;
+    [VALUE_16]: string;
     constructor(value: string, parameters?: FnParameters, { group }?: Options);
     // (undocumented)
     static readonly CARDINALITY: Cardinality;
@@ -716,7 +746,7 @@ export type GenderParameters = {
 // @public
 export class GenderProperty extends Property {
     // (undocumented)
-    [VALUE_16]: string;
+    [VALUE_17]: string;
     constructor(value: string, parameters?: GenderParameters, { group }?: Options);
     // (undocumented)
     static readonly CARDINALITY: Cardinality;
@@ -758,7 +788,7 @@ export type GeoParameters = {
 // @public
 export class GeoProperty extends Property {
     // (undocumented)
-    [VALUE_17]: string;
+    [VALUE_18]: string;
     constructor(value: string, parameters?: GeoParameters, { group }?: Options);
     // (undocumented)
     static readonly CARDINALITY: Cardinality;
@@ -808,7 +838,7 @@ export type HobbyParameters = {
 // @public
 export class HobbyProperty extends Property {
     // (undocumented)
-    [VALUE_18]: string;
+    [VALUE_19]: string;
     constructor(value: string, parameters?: HobbyParameters, { group }?: Options);
     // (undocumented)
     static readonly CARDINALITY: Cardinality;
@@ -854,7 +884,7 @@ export type ImppParameters = {
 // @public
 export class ImppProperty extends Property {
     // (undocumented)
-    [VALUE_19]: string;
+    [VALUE_20]: string;
     constructor(value: string, parameters?: ImppParameters, { group }?: Options);
     // (undocumented)
     static readonly CARDINALITY: Cardinality;
@@ -898,7 +928,7 @@ export type InterestParameters = {
 // @public
 export class InterestProperty extends Property {
     // (undocumented)
-    [VALUE_20]: string;
+    [VALUE_21]: string;
     constructor(value: string, parameters?: InterestParameters, { group }?: Options);
     // (undocumented)
     static readonly CARDINALITY: Cardinality;
@@ -943,7 +973,7 @@ export type KeyParameters = KeyUriOrUndefinedValueParameters | KeyTextValueParam
 // @public
 export class KeyProperty extends Property {
     // (undocumented)
-    [VALUE_21]: string;
+    [VALUE_22]: string;
     constructor(value: string, parameters?: KeyParameters, { group }?: Options);
     // (undocumented)
     static readonly CARDINALITY: Cardinality;
@@ -995,7 +1025,7 @@ export type KindParameters = {
 // @public
 export class KindProperty extends Property {
     // (undocumented)
-    [VALUE_22]: string;
+    [VALUE_23]: string;
     constructor(value: Kind, parameters?: KindParameters, { group }?: Options);
     // (undocumented)
     static readonly CARDINALITY: Cardinality;
@@ -1030,7 +1060,7 @@ export type LangParameters = {
 // @public
 export class LangProperty extends Property {
     // (undocumented)
-    [VALUE_23]: string;
+    [VALUE_24]: string;
     constructor(value: string, parameters?: LangParameters, { group }?: Options);
     // (undocumented)
     static readonly CARDINALITY: Cardinality;
@@ -1075,7 +1105,7 @@ export type LogoParameters = {
 // @public
 export class LogoProperty extends Property {
     // (undocumented)
-    [VALUE_24]: string;
+    [VALUE_25]: string;
     constructor(value: string, parameters?: LogoParameters, { group }?: Options);
     // (undocumented)
     static readonly CARDINALITY: Cardinality;
@@ -1118,7 +1148,7 @@ export type MemberParameters = {
 // @public
 export class MemberProperty extends Property {
     // (undocumented)
-    [VALUE_25]: string;
+    [VALUE_26]: string;
     constructor(value: string, parameters?: MemberParameters, { group }?: Options);
     // (undocumented)
     static readonly CARDINALITY: Cardinality;
@@ -1165,7 +1195,7 @@ export type NicknameParameters = {
 // @public
 export class NicknameProperty extends Property {
     // (undocumented)
-    [VALUE_27]: string;
+    [VALUE_28]: string;
     constructor(value: string, parameters?: NicknameParameters, { group }?: Options);
     // (undocumented)
     static readonly CARDINALITY: Cardinality;
@@ -1209,7 +1239,7 @@ export type NoteParameters = {
 // @public
 export class NoteProperty extends Property {
     // (undocumented)
-    [VALUE_28]: string;
+    [VALUE_29]: string;
     constructor(value: string, parameters?: NoteParameters, { group }?: Options);
     // (undocumented)
     static readonly CARDINALITY: Cardinality;
@@ -1249,7 +1279,7 @@ export type NParameters = {
 // @public
 export class NProperty extends Property {
     // (undocumented)
-    [VALUE_26]: string;
+    [VALUE_27]: string;
     constructor(value: string, parameters?: NParameters, { group }?: Options);
     get additionalName(): string;
     // (undocumented)
@@ -1317,7 +1347,7 @@ export type OrgDirectoryParameters = {
 // @public
 export class OrgDirectoryProperty extends Property {
     // (undocumented)
-    [VALUE_30]: string;
+    [VALUE_31]: string;
     constructor(value: string, parameters?: OrgDirectoryParameters, { group }?: Options);
     // (undocumented)
     static readonly CARDINALITY: Cardinality;
@@ -1359,7 +1389,7 @@ export type OrgParameters = {
 // @public
 export class OrgProperty extends Property {
     // (undocumented)
-    [VALUE_29]: string;
+    [VALUE_30]: string;
     constructor(value: string, parameters?: OrgParameters, { group }?: Options);
     // (undocumented)
     static readonly CARDINALITY: Cardinality;
@@ -1406,7 +1436,7 @@ export type PhotoParameters = {
 // @public
 export class PhotoProperty extends Property {
     // (undocumented)
-    [VALUE_31]: string;
+    [VALUE_32]: string;
     constructor(value: string, parameters?: PhotoParameters, { group }?: Options);
     // (undocumented)
     static readonly CARDINALITY: Cardinality;
@@ -1458,7 +1488,7 @@ export type ProdidParameters = {
 // @public
 export class ProdidProperty extends Property {
     // (undocumented)
-    [VALUE_32]: string;
+    [VALUE_33]: string;
     constructor(value: string, parameters?: ProdidParameters, { group }?: Options);
     // (undocumented)
     static readonly CARDINALITY: Cardinality;
@@ -1518,7 +1548,7 @@ export type RelatedParameters = RelatedUriOrUndefinedValueParameters | RelatedTe
 // @public
 export class RelatedProperty extends Property {
     // (undocumented)
-    [VALUE_33]: string;
+    [VALUE_34]: string;
     constructor(value: string, parameters?: RelatedParameters, { group }?: Options);
     // (undocumented)
     static readonly CARDINALITY: Cardinality;
@@ -1571,7 +1601,7 @@ export type RevParameters = {
 // @public
 export class RevProperty extends Property {
     // (undocumented)
-    [VALUE_34]: string;
+    [VALUE_35]: string;
     constructor(value: string, parameters?: RevParameters, { group }?: Options);
     // (undocumented)
     static readonly CARDINALITY: Cardinality;
@@ -1607,7 +1637,7 @@ export type RoleParameters = {
 // @public
 export class RoleProperty extends Property {
     // (undocumented)
-    [VALUE_35]: string;
+    [VALUE_36]: string;
     constructor(value: string, parameters?: RoleParameters, { group }?: Options);
     // (undocumented)
     static readonly CARDINALITY: Cardinality;
@@ -1655,7 +1685,7 @@ export type SoundParameters = {
 // @public
 export class SoundProperty extends Property {
     // (undocumented)
-    [VALUE_36]: string;
+    [VALUE_37]: string;
     constructor(value: string, parameters?: SoundParameters, { group }?: Options);
     // (undocumented)
     static readonly CARDINALITY: Cardinality;
@@ -1698,7 +1728,7 @@ export type SourceParameters = {
 // @public
 export class SourceProperty extends Property {
     // (undocumented)
-    [VALUE_37]: string;
+    [VALUE_38]: string;
     constructor(value: string, parameters?: SourceParameters, { group }?: Options);
     // (undocumented)
     static readonly CARDINALITY: Cardinality;
@@ -1743,7 +1773,7 @@ export type TelParameters = TelUriValueParameters | TelTextOrUndefinedValueParam
 // @public
 export class TelProperty extends Property {
     // (undocumented)
-    [VALUE_38]: string;
+    [VALUE_39]: string;
     constructor(value: string, parameters?: TelParameters, { group }?: Options);
     // (undocumented)
     static readonly CARDINALITY: Cardinality;
@@ -1800,7 +1830,7 @@ export type TitleParameters = {
 // @public
 export class TitleProperty extends Property {
     // (undocumented)
-    [VALUE_39]: string;
+    [VALUE_40]: string;
     constructor(value: string, parameters?: TitleParameters, { group }?: Options);
     // (undocumented)
     static readonly CARDINALITY: Cardinality;
@@ -1848,7 +1878,7 @@ export type TzParameters = TzTextOrUtcOffsetOrUndefinedValueParameters | TzUriVa
 // @public
 export class TzProperty extends Property {
     // (undocumented)
-    [VALUE_40]: string;
+    [VALUE_41]: string;
     constructor(value: string, parameters?: TzParameters, { group }?: Options);
     // (undocumented)
     static readonly CARDINALITY: Cardinality;
@@ -1897,7 +1927,7 @@ export type UidParameters = {
 // @public
 export class UidProperty extends Property {
     // (undocumented)
-    [VALUE_41]: string;
+    [VALUE_42]: string;
     constructor(value: string, parameters?: UidParameters, { group }?: Options);
     // (undocumented)
     static readonly CARDINALITY: Cardinality;
@@ -1936,7 +1966,7 @@ export type UrlParameters = {
 // @public
 export class UrlProperty extends Property {
     // (undocumented)
-    [VALUE_42]: string;
+    [VALUE_43]: string;
     constructor(value: string, parameters?: UrlParameters, { group }?: Options);
     // (undocumented)
     static readonly CARDINALITY: Cardinality;
@@ -1989,6 +2019,8 @@ class Vcard4Generator {
     clientpidmap: ClientpidmapPropertyArray;
     // (undocumented)
     contactUri: ContactUriPropertyArray;
+    // (undocumented)
+    created: CreatedConfig | NullProperty;
     // (undocumented)
     deathdate: DeathdateConfig | NullProperty;
     // (undocumented)
@@ -2087,6 +2119,8 @@ export interface Vcard4GeneratorConfig {
     // (undocumented)
     contactUri?: ContactUriConfig;
     // (undocumented)
+    created?: CreatedConfig;
+    // (undocumented)
     deathdate?: DeathdateConfig;
     // (undocumented)
     deathplace?: DeathplaceConfig;
@@ -2170,7 +2204,7 @@ export interface VersionParameters {
 // @public
 export class VersionProperty extends Property {
     // (undocumented)
-    [VALUE_43]: string;
+    [VALUE_44]: string;
     constructor(value?: string, parameters?: VersionParameters, { group }?: Options);
     // (undocumented)
     static readonly CARDINALITY: Cardinality;
@@ -2202,7 +2236,7 @@ export type XmlParameters = {
 // @public
 export class XmlProperty extends Property {
     // (undocumented)
-    [VALUE_44]: string;
+    [VALUE_45]: string;
     constructor(value: string, parameters?: XmlParameters, { group }?: Options);
     // (undocumented)
     static readonly CARDINALITY: Cardinality;

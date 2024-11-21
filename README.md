@@ -138,14 +138,10 @@ To-Do
         - [x] `CREATED` Parameter _(RFC 9554)_
         - [x] `DERIVED` Parameter _(RFC 9554)_
         - [x] `PROP-ID` Parameter _(RFC 9554)_
-    - [ ] `CREATED` _(RFC 9554)_
-        - [ ] Line Folding
-        - [ ] Value Escaping
-        - [ ] `VALUE` Parameter
-        - [ ] `AUTHOR` Parameter _(RFC 9554)_
-        - [ ] `AUTHOR-NAME` Parameter _(RFC 9554)_
-        - [ ] `CREATED` Parameter _(RFC 9554)_
-        - [ ] `DERIVED` Parameter _(RFC 9554)_
+    - [x] `CREATED` _(RFC 9554)_
+        - [x] Line Folding
+        - [x] Value Escaping
+        - [x] `VALUE` Parameter
     - [x] `DEATHDATE` _(RFC6474)_
         - [x] Line Folding
         - [x] Value Escaping

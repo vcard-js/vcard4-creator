@@ -63,6 +63,9 @@ import ClientpidmapProperty, {
 import ContactUriProperty, {
     type ContactUriConfig, ContactUriParameters, ContactUriRestConfig
 } from './properties/ContactUriProperty.js';
+import CreatedProperty, {
+    type CreatedConfig, CreatedParameters, CreatedRestConfig
+} from './properties/CreatedProperty.js';
 import DeathdateProperty, {
     type DeathdateCommonParameters,
     DeathdateConfig,
@@ -165,6 +168,7 @@ export interface Vcard4GeneratorConfig {
     categories?: CategoriesConfig;
     clientpidmap?: ClientpidmapConfig;
     contactUri?: ContactUriConfig;
+    created?: CreatedConfig;
     deathdate?: DeathdateConfig;
     deathplace?: DeathplaceConfig;
     email?: EmailConfig;
@@ -220,6 +224,8 @@ export default class Vcard4Generator {
     clientpidmap: ClientpidmapPropertyArray;
 
     contactUri: ContactUriPropertyArray;
+
+    created: CreatedConfig | NullProperty;
 
     deathdate: DeathdateConfig | NullProperty;
 
@@ -302,6 +308,7 @@ export default class Vcard4Generator {
             categories,
             clientpidmap,
             contactUri,
+            created,
             deathdate,
             deathplace,
             email,
@@ -405,6 +412,7 @@ export default class Vcard4Generator {
         this.anniversary = anniversary ? AnniversaryProperty.from(anniversary) : new NullProperty();
         this.bday = bday ? BdayProperty.from(bday) : new NullProperty();
         this.birthplace = birthplace ? BirthplaceProperty.from(birthplace) : new NullProperty();
+        this.created = created ? CreatedProperty.from(created) : new NullProperty();
         this.deathdate = deathdate ? DeathdateProperty.from(deathdate) : new NullProperty();
         this.deathplace = deathplace ? DeathplaceProperty.from(deathplace) : new NullProperty();
         this.gender = gender ? GenderProperty.from(gender) : new NullProperty();
@@ -429,6 +437,7 @@ export default class Vcard4Generator {
             ...this.categories.map(toString),
             ...this.clientpidmap.map(toString),
             ...this.contactUri.map(toString),
+            this.created.toString(),
             this.deathdate.toString(),
             this.deathplace.toString(),
             ...this.email.map(toString),
@@ -650,6 +659,10 @@ export type {
     ContactUriProperty,
     ContactUriPropertyArray,
     ContactUriRestConfig,
+    CreatedConfig,
+    CreatedParameters,
+    CreatedProperty,
+    CreatedRestConfig,
     DeathdateCommonParameters,
     DeathdateConfig,
     DeathdateDateAndOrTimeOrUndefinedValueParameters,
