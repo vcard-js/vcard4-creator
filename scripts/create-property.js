@@ -31,7 +31,7 @@ const cardinalityDescription = cardinalityDescriptions[cardinality] ?? '...';
 const property = process.argv[2];
 const propertySrc = renderTemplate('Property.ts.hbs', { cardinality, cardinalityDescription, property });
 const propertyFilename = `${pascalCase(property)}Property.ts`;
-const propertyFilepath = path.resolve(__dirname, '..', 'lib', 'properties', propertyFilename);
+const propertyFilepath = path.resolve(__dirname, '..', 'src', 'properties', propertyFilename);
 
 fs.writeFileSync(propertyFilepath, propertySrc);
 
@@ -49,7 +49,7 @@ if (!['*', '1*'].includes(cardinality)) process.exit(0);
 
 const propertyArraySrc = renderTemplate('PropertyArray.ts.hbs', { property });
 const propertyArrayFilename = `${pascalCase(property)}PropertyArray.ts`;
-const propertyArrayFilepath = path.resolve(__dirname, '..', 'lib', 'properties', 'arrays', propertyArrayFilename);
+const propertyArrayFilepath = path.resolve(__dirname, '..', 'src', 'properties', 'arrays', propertyArrayFilename);
 
 fs.writeFileSync(propertyArrayFilepath, propertyArraySrc);
 
