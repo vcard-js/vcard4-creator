@@ -1,8 +1,8 @@
-import { Altid, Calscale, Cardinality, Group, Options, Pid, Pref, Type, Value } from '../types.js';
+import { Altid, Calscale, Cardinality, CommonParameters, Group, Options, Pid, Pref, Type, Value } from '../types.js';
 import isString from '../util/is-string.js';
 import Property from './Property.js';
 
-export interface {{{pascalCase property}}}Parameters {
+export type {{{pascalCase property}}}Parameters = {
     [key: string]: never;
     value?: '';
     altid?: Altid;
@@ -16,7 +16,7 @@ export interface {{{pascalCase property}}}Parameters {
     sortAs?: string;
     type?: Type;
     tz?: string;
-}
+} & CommonParameters;
 
 export type {{{pascalCase property}}}RestConfig = [value: string, parameters?: {{{pascalCase property}}}Parameters, options?: Options];
 

@@ -55,13 +55,13 @@ describe('{{{pascalCase property}}}Property', () => {
         });
     });
 
-    describe('.factory()', () => {
+    describe('.from()', () => {
         it('is a static method', () => {
-            expect({{{pascalCase property}}}Property.factory).to.be.a('function');
+            expect({{{pascalCase property}}}Property.from).to.be.a('function');
         });
 
         it('returns an instance of `{{{pascalCase property}}}Property`', () => {
-            const {{{camelCase property}}} = {{{pascalCase property}}}Property.factory('...');
+            const {{{camelCase property}}} = {{{pascalCase property}}}Property.from('...');
 
             expect({{{camelCase property}}} instanceof {{{pascalCase property}}}Property).to.equal(true);
         });
@@ -69,11 +69,11 @@ describe('{{{pascalCase property}}}Property', () => {
         it('returns an instance if provided one as an argument', () => {
             const {{{camelCase property}}} = new {{{pascalCase property}}}Property('...');
 
-            expect({{{pascalCase property}}}Property.factory({{{camelCase property}}})).to.equal({{{camelCase property}}});
+            expect({{{pascalCase property}}}Property.from({{{camelCase property}}})).to.equal({{{camelCase property}}});
         });
 
         it('creates an instance from a string value argument', () => {
-            const {{{camelCase property}}} = {{{pascalCase property}}}Property.factory('...');
+            const {{{camelCase property}}} = {{{pascalCase property}}}Property.from('...');
 
             expect({{{camelCase property}}} instanceof {{{pascalCase property}}}Property).to.equal(true);
         });
@@ -81,7 +81,7 @@ describe('{{{pascalCase property}}}Property', () => {
         it('creates an instance from an array argument', () => {
             const value = '...';
             const config: {{{pascalCase property}}}PropertyRestConfig = [value, { type: 'home' }];
-            const {{{camelCase property}}} = {{{pascalCase property}}}Property.factory(config);
+            const {{{camelCase property}}} = {{{pascalCase property}}}Property.from(config);
 
             expect({{{camelCase property}}} instanceof {{{pascalCase property}}}Property).to.equal(true);
         });
