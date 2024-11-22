@@ -18,6 +18,7 @@ import ExpertisePropertyArray from './properties/arrays/ExpertisePropertyArray.j
 import FburlPropertyArray from './properties/arrays/FburlPropertyArray.js';
 import FnPropertyArray from './properties/arrays/FnPropertyArray.js';
 import GeoPropertyArray from './properties/arrays/GeoPropertyArray.js';
+import GramgenderPropertyArray from './properties/arrays/GramgenderPropertyArray.js';
 import HobbyPropertyArray from './properties/arrays/HobbyPropertyArray.js';
 import ImppPropertyArray from './properties/arrays/ImppPropertyArray.js';
 import InterestPropertyArray from './properties/arrays/InterestPropertyArray.js';
@@ -87,6 +88,9 @@ import GenderProperty, {
     type GenderConfig, GenderParameters, GenderRestConfig, Sex
 } from './properties/GenderProperty.js';
 import GeoProperty, { type GeoConfig, GeoParameters, GeoRestConfig } from './properties/GeoProperty.js';
+import GramgenderProperty, {
+    type Gramgender, GramgenderConfig, GramgenderParameters, GramgenderRestConfig
+} from './properties/GramgenderProperty.js';
 import HobbyProperty, { type HobbyConfig, HobbyParameters, HobbyRestConfig } from './properties/HobbyProperty.js';
 import ImppProperty, { type ImppConfig, ImppParameters, ImppRestConfig } from './properties/ImppProperty.js';
 import InterestProperty, {
@@ -177,6 +181,7 @@ export interface Vcard4GeneratorConfig {
     fn: FnConfig;
     gender?: GenderConfig;
     geo?: GeoConfig;
+    gramgender?: GramgenderConfig;
     hobby?: HobbyConfig;
     impp?: ImppConfig;
     interest?: InterestConfig;
@@ -242,6 +247,8 @@ export default class Vcard4Generator {
     gender: GenderConfig | NullProperty;
 
     geo: GeoPropertyArray;
+
+    gramgender: GramgenderPropertyArray;
 
     hobby: HobbyPropertyArray;
 
@@ -317,6 +324,7 @@ export default class Vcard4Generator {
             fn,
             gender,
             geo,
+            gramgender,
             hobby,
             impp,
             interest,
@@ -356,6 +364,7 @@ export default class Vcard4Generator {
         this.fburl = new FburlPropertyArray();
         this.fn = new FnPropertyArray();
         this.geo = new GeoPropertyArray();
+        this.gramgender = new GramgenderPropertyArray();
         this.hobby = new HobbyPropertyArray();
         this.impp = new ImppPropertyArray();
         this.interest = new InterestPropertyArray();
@@ -388,6 +397,7 @@ export default class Vcard4Generator {
         fburl && this.fburl.push(fburl);
         fn && this.fn.push(fn);
         geo && this.geo.push(geo);
+        gramgender && this.gramgender.push(gramgender);
         hobby && this.hobby.push(hobby);
         impp && this.impp.push(impp);
         interest && this.interest.push(interest);
@@ -446,6 +456,7 @@ export default class Vcard4Generator {
             ...this.fn.map(toString),
             this.gender.toString(),
             ...this.geo.map(toString),
+            ...this.gramgender.map(toString),
             ...this.hobby.map(toString),
             ...this.impp.map(toString),
             ...this.interest.map(toString),
@@ -704,6 +715,12 @@ export type {
     GeoProperty,
     GeoPropertyArray,
     GeoRestConfig,
+    Gramgender,
+    GramgenderConfig,
+    GramgenderParameters,
+    GramgenderProperty,
+    GramgenderPropertyArray,
+    GramgenderRestConfig,
     HobbyConfig,
     HobbyParameters,
     HobbyProperty,

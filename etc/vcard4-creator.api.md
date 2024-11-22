@@ -816,6 +816,45 @@ export class GeoPropertyArray extends Array {
 export type GeoRestConfig = [value: string, parameters?: GeoParameters, options?: Options];
 
 // @public (undocumented)
+export type Gramgender = 'animate' | 'common' | 'feminine' | 'inanimate' | 'masculine' | 'neuter';
+
+// @public (undocumented)
+export type GramgenderConfig = GramgenderProperty | GramgenderRestConfig | Gramgender;
+
+// @public (undocumented)
+export type GramgenderParameters = {
+    language?: string;
+};
+
+// @public
+export class GramgenderProperty extends Property {
+    // (undocumented)
+    [VALUE_19]: string;
+    constructor(value: string, parameters?: GramgenderParameters, { group }?: Options);
+    // (undocumented)
+    static readonly CARDINALITY: Cardinality;
+    // (undocumented)
+    static readonly DEFAULT_VALUE_TYPE: Value;
+    // (undocumented)
+    static from(value: GramgenderConfig): GramgenderProperty;
+    // (undocumented)
+    group: Group;
+    // (undocumented)
+    parameters: GramgenderParameters;
+    // (undocumented)
+    valueOf(): string;
+}
+
+// @public (undocumented)
+export class GramgenderPropertyArray extends Array {
+    // (undocumented)
+    push(...items: GramgenderConfig[]): number;
+}
+
+// @public (undocumented)
+export type GramgenderRestConfig = [value: Gramgender, parameters?: GramgenderParameters, options?: Options];
+
+// @public (undocumented)
 export type Group = number | string;
 
 // @public (undocumented)
@@ -838,7 +877,7 @@ export type HobbyParameters = {
 // @public
 export class HobbyProperty extends Property {
     // (undocumented)
-    [VALUE_19]: string;
+    [VALUE_20]: string;
     constructor(value: string, parameters?: HobbyParameters, { group }?: Options);
     // (undocumented)
     static readonly CARDINALITY: Cardinality;
@@ -884,7 +923,7 @@ export type ImppParameters = {
 // @public
 export class ImppProperty extends Property {
     // (undocumented)
-    [VALUE_20]: string;
+    [VALUE_21]: string;
     constructor(value: string, parameters?: ImppParameters, { group }?: Options);
     // (undocumented)
     static readonly CARDINALITY: Cardinality;
@@ -928,7 +967,7 @@ export type InterestParameters = {
 // @public
 export class InterestProperty extends Property {
     // (undocumented)
-    [VALUE_21]: string;
+    [VALUE_22]: string;
     constructor(value: string, parameters?: InterestParameters, { group }?: Options);
     // (undocumented)
     static readonly CARDINALITY: Cardinality;
@@ -973,7 +1012,7 @@ export type KeyParameters = KeyUriOrUndefinedValueParameters | KeyTextValueParam
 // @public
 export class KeyProperty extends Property {
     // (undocumented)
-    [VALUE_22]: string;
+    [VALUE_23]: string;
     constructor(value: string, parameters?: KeyParameters, { group }?: Options);
     // (undocumented)
     static readonly CARDINALITY: Cardinality;
@@ -1025,7 +1064,7 @@ export type KindParameters = {
 // @public
 export class KindProperty extends Property {
     // (undocumented)
-    [VALUE_23]: string;
+    [VALUE_24]: string;
     constructor(value: Kind, parameters?: KindParameters, { group }?: Options);
     // (undocumented)
     static readonly CARDINALITY: Cardinality;
@@ -1060,7 +1099,7 @@ export type LangParameters = {
 // @public
 export class LangProperty extends Property {
     // (undocumented)
-    [VALUE_24]: string;
+    [VALUE_25]: string;
     constructor(value: string, parameters?: LangParameters, { group }?: Options);
     // (undocumented)
     static readonly CARDINALITY: Cardinality;
@@ -1105,7 +1144,7 @@ export type LogoParameters = {
 // @public
 export class LogoProperty extends Property {
     // (undocumented)
-    [VALUE_25]: string;
+    [VALUE_26]: string;
     constructor(value: string, parameters?: LogoParameters, { group }?: Options);
     // (undocumented)
     static readonly CARDINALITY: Cardinality;
@@ -1148,7 +1187,7 @@ export type MemberParameters = {
 // @public
 export class MemberProperty extends Property {
     // (undocumented)
-    [VALUE_26]: string;
+    [VALUE_27]: string;
     constructor(value: string, parameters?: MemberParameters, { group }?: Options);
     // (undocumented)
     static readonly CARDINALITY: Cardinality;
@@ -1195,7 +1234,7 @@ export type NicknameParameters = {
 // @public
 export class NicknameProperty extends Property {
     // (undocumented)
-    [VALUE_28]: string;
+    [VALUE_29]: string;
     constructor(value: string, parameters?: NicknameParameters, { group }?: Options);
     // (undocumented)
     static readonly CARDINALITY: Cardinality;
@@ -1239,7 +1278,7 @@ export type NoteParameters = {
 // @public
 export class NoteProperty extends Property {
     // (undocumented)
-    [VALUE_29]: string;
+    [VALUE_30]: string;
     constructor(value: string, parameters?: NoteParameters, { group }?: Options);
     // (undocumented)
     static readonly CARDINALITY: Cardinality;
@@ -1279,7 +1318,7 @@ export type NParameters = {
 // @public
 export class NProperty extends Property {
     // (undocumented)
-    [VALUE_27]: string;
+    [VALUE_28]: string;
     constructor(value: string, parameters?: NParameters, { group }?: Options);
     get additionalName(): string;
     // (undocumented)
@@ -1347,7 +1386,7 @@ export type OrgDirectoryParameters = {
 // @public
 export class OrgDirectoryProperty extends Property {
     // (undocumented)
-    [VALUE_31]: string;
+    [VALUE_32]: string;
     constructor(value: string, parameters?: OrgDirectoryParameters, { group }?: Options);
     // (undocumented)
     static readonly CARDINALITY: Cardinality;
@@ -1389,7 +1428,7 @@ export type OrgParameters = {
 // @public
 export class OrgProperty extends Property {
     // (undocumented)
-    [VALUE_30]: string;
+    [VALUE_31]: string;
     constructor(value: string, parameters?: OrgParameters, { group }?: Options);
     // (undocumented)
     static readonly CARDINALITY: Cardinality;
@@ -1436,7 +1475,7 @@ export type PhotoParameters = {
 // @public
 export class PhotoProperty extends Property {
     // (undocumented)
-    [VALUE_32]: string;
+    [VALUE_33]: string;
     constructor(value: string, parameters?: PhotoParameters, { group }?: Options);
     // (undocumented)
     static readonly CARDINALITY: Cardinality;
@@ -1488,7 +1527,7 @@ export type ProdidParameters = {
 // @public
 export class ProdidProperty extends Property {
     // (undocumented)
-    [VALUE_33]: string;
+    [VALUE_34]: string;
     constructor(value: string, parameters?: ProdidParameters, { group }?: Options);
     // (undocumented)
     static readonly CARDINALITY: Cardinality;
@@ -1548,7 +1587,7 @@ export type RelatedParameters = RelatedUriOrUndefinedValueParameters | RelatedTe
 // @public
 export class RelatedProperty extends Property {
     // (undocumented)
-    [VALUE_34]: string;
+    [VALUE_35]: string;
     constructor(value: string, parameters?: RelatedParameters, { group }?: Options);
     // (undocumented)
     static readonly CARDINALITY: Cardinality;
@@ -1601,7 +1640,7 @@ export type RevParameters = {
 // @public
 export class RevProperty extends Property {
     // (undocumented)
-    [VALUE_35]: string;
+    [VALUE_36]: string;
     constructor(value: string, parameters?: RevParameters, { group }?: Options);
     // (undocumented)
     static readonly CARDINALITY: Cardinality;
@@ -1637,7 +1676,7 @@ export type RoleParameters = {
 // @public
 export class RoleProperty extends Property {
     // (undocumented)
-    [VALUE_36]: string;
+    [VALUE_37]: string;
     constructor(value: string, parameters?: RoleParameters, { group }?: Options);
     // (undocumented)
     static readonly CARDINALITY: Cardinality;
@@ -1685,7 +1724,7 @@ export type SoundParameters = {
 // @public
 export class SoundProperty extends Property {
     // (undocumented)
-    [VALUE_37]: string;
+    [VALUE_38]: string;
     constructor(value: string, parameters?: SoundParameters, { group }?: Options);
     // (undocumented)
     static readonly CARDINALITY: Cardinality;
@@ -1728,7 +1767,7 @@ export type SourceParameters = {
 // @public
 export class SourceProperty extends Property {
     // (undocumented)
-    [VALUE_38]: string;
+    [VALUE_39]: string;
     constructor(value: string, parameters?: SourceParameters, { group }?: Options);
     // (undocumented)
     static readonly CARDINALITY: Cardinality;
@@ -1773,7 +1812,7 @@ export type TelParameters = TelUriValueParameters | TelTextOrUndefinedValueParam
 // @public
 export class TelProperty extends Property {
     // (undocumented)
-    [VALUE_39]: string;
+    [VALUE_40]: string;
     constructor(value: string, parameters?: TelParameters, { group }?: Options);
     // (undocumented)
     static readonly CARDINALITY: Cardinality;
@@ -1830,7 +1869,7 @@ export type TitleParameters = {
 // @public
 export class TitleProperty extends Property {
     // (undocumented)
-    [VALUE_40]: string;
+    [VALUE_41]: string;
     constructor(value: string, parameters?: TitleParameters, { group }?: Options);
     // (undocumented)
     static readonly CARDINALITY: Cardinality;
@@ -1878,7 +1917,7 @@ export type TzParameters = TzTextOrUtcOffsetOrUndefinedValueParameters | TzUriVa
 // @public
 export class TzProperty extends Property {
     // (undocumented)
-    [VALUE_41]: string;
+    [VALUE_42]: string;
     constructor(value: string, parameters?: TzParameters, { group }?: Options);
     // (undocumented)
     static readonly CARDINALITY: Cardinality;
@@ -1927,7 +1966,7 @@ export type UidParameters = {
 // @public
 export class UidProperty extends Property {
     // (undocumented)
-    [VALUE_42]: string;
+    [VALUE_43]: string;
     constructor(value: string, parameters?: UidParameters, { group }?: Options);
     // (undocumented)
     static readonly CARDINALITY: Cardinality;
@@ -1966,7 +2005,7 @@ export type UrlParameters = {
 // @public
 export class UrlProperty extends Property {
     // (undocumented)
-    [VALUE_43]: string;
+    [VALUE_44]: string;
     constructor(value: string, parameters?: UrlParameters, { group }?: Options);
     // (undocumented)
     static readonly CARDINALITY: Cardinality;
@@ -2037,6 +2076,8 @@ class Vcard4Generator {
     gender: GenderConfig | NullProperty;
     // (undocumented)
     geo: GeoPropertyArray;
+    // (undocumented)
+    gramgender: GramgenderPropertyArray;
     // (undocumented)
     hobby: HobbyPropertyArray;
     // (undocumented)
@@ -2137,6 +2178,8 @@ export interface Vcard4GeneratorConfig {
     // (undocumented)
     geo?: GeoConfig;
     // (undocumented)
+    gramgender?: GramgenderConfig;
+    // (undocumented)
     hobby?: HobbyConfig;
     // (undocumented)
     impp?: ImppConfig;
@@ -2204,7 +2247,7 @@ export interface VersionParameters {
 // @public
 export class VersionProperty extends Property {
     // (undocumented)
-    [VALUE_44]: string;
+    [VALUE_45]: string;
     constructor(value?: string, parameters?: VersionParameters, { group }?: Options);
     // (undocumented)
     static readonly CARDINALITY: Cardinality;
@@ -2236,7 +2279,7 @@ export type XmlParameters = {
 // @public
 export class XmlProperty extends Property {
     // (undocumented)
-    [VALUE_45]: string;
+    [VALUE_46]: string;
     constructor(value: string, parameters?: XmlParameters, { group }?: Options);
     // (undocumented)
     static readonly CARDINALITY: Cardinality;

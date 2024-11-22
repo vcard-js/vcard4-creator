@@ -241,15 +241,10 @@ To-Do
         - [x] `CREATED` Parameter _(RFC 9554)_
         - [x] `DERIVED` Parameter _(RFC 9554)_
         - [x] `PROP-ID` Parameter _(RFC 9554)_
-    - [ ] `GRAMGENDER` Parameter _(RFC 9554)_
-        - [ ] Line Folding
-        - [ ] Value Escaping
-        - [ ] `LANGUAGE` Parameter
-        - [ ] `AUTHOR` Parameter _(RFC 9554)_
-        - [ ] `AUTHOR-NAME` Parameter _(RFC 9554)_
-        - [ ] `CREATED` Parameter _(RFC 9554)_
-        - [ ] `DERIVED` Parameter _(RFC 9554)_
-        - [ ] `PROP-ID` Parameter _(RFC 9554)_
+    - [x] `GRAMGENDER` Parameter _(RFC 9554)_
+        - [x] Line Folding
+        - [x] Value Escaping
+        - [x] `LANGUAGE` Parameter
     - [x] `HOBBY` _(RFC6715)_
         - [x] Line Folding
         - [x] Value Escaping
