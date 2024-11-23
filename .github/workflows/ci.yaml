@@ -22,7 +22,7 @@ jobs:
       - name: Install dependencies
         run: npm ci
       - name: Lint
-        if: ${{ !env.ACT }} # Skip linting if we're running ACT since we lint and fix with Husky & lint-staged locally.
+        if: ${{ !env.ACT }} # Skip linting if we're running Act since we do that via Husky & lint-staged locally.
         run: npm run lint
       - name: Build
         run: npm run build
