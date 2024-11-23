@@ -1,5 +1,6 @@
 import { Altid, Calscale, Cardinality, CommonParameters, Group, Options, Pid, Pref, Type, Value } from '../types.js';
 import isString from '../util/is-string.js';
+import isValidGroup from '../util/is-valid-group.js';
 import Property from './Property.js';
 
 export type {{{pascalCase property}}}Parameters = {
@@ -55,6 +56,9 @@ export default class {{{pascalCase property}}}Property extends Property {
 
         if (!isString(value))
             throw new TypeError(`The value "${value}" is not a string type`);
+
+        if (!isValidGroup(group))
+            throw new TypeError(`The group "${group}" is not a string or integer`);
 
         this.group = group;
         this.parameters = parameters;
