@@ -80,7 +80,7 @@ describe('{{{pascalCase property}}}Property', () => {
 
         it('creates an instance from an array argument', () => {
             const value = '...';
-            const config: {{{pascalCase property}}}PropertyRestConfig = [value, { type: 'home' }];
+            const config: {{{pascalCase property}}}RestConfig = [value, { type: 'home' }];
             const {{{camelCase property}}} = {{{pascalCase property}}}Property.from(config);
 
             expect({{{camelCase property}}} instanceof {{{pascalCase property}}}Property).to.equal(true);
