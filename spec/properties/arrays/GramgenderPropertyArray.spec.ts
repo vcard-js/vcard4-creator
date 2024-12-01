@@ -14,21 +14,21 @@ describe('GramgenderPropertyArray', () => {
         });
 
         it('returns a number', () => {
-            const value = '...';
+            const value = 'animate';
             const gramgenderProperties = new GramgenderPropertyArray();
 
             expect(gramgenderProperties.push(value)).to.be.a('number');
         });
 
         it('returns the length of the array', () => {
-            const value = '...';
+            const value = 'common';
             const gramgenderProperties = new GramgenderPropertyArray();
 
             expect(gramgenderProperties.push(value)).to.equal(1);
         });
 
         it('creates an `GramgenderProperty` object in the array', () => {
-            const value = '...';
+            const value = 'feminine';
             const gramgenderProperties = new GramgenderPropertyArray();
 
             gramgenderProperties.push(value);
@@ -37,7 +37,7 @@ describe('GramgenderPropertyArray', () => {
         });
 
         it('creates an `GramgenderProperty` object in the array with the proper value', () => {
-            const value = '...';
+            const value = 'inanimate';
             const gramgenderProperties = new GramgenderPropertyArray();
 
             gramgenderProperties.push(value);

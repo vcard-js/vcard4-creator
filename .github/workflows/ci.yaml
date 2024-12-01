@@ -41,5 +41,7 @@ jobs:
         run: npm ci
       - name: Build
         run: npm run build
+      - name: Check spec types
+        run: npm run check-spec-types
       - name: Check API
         run: npx api-extractor run

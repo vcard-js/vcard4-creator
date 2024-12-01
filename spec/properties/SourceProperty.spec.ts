@@ -28,7 +28,7 @@ describe('SourceProperty', () => {
         });
 
         it('correctly returns parameters', () => {
-            const parameters = { pref: 1 };
+            const parameters = { pref: 1 } as const;
             const value = 'ldap://ldap.example.com/cn=Babs%20Jensen,%20o=Babsco,%20c=US';
             const source = new SourceProperty(value, parameters);
             const actual = source.toString();
