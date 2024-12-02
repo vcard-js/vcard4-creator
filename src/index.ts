@@ -106,6 +106,9 @@ import KeyProperty, {
 } from './properties/KeyProperty.js';
 import KindProperty, { type Kind, KindConfig, KindParameters, KindRestConfig } from './properties/KindProperty.js';
 import LangProperty, { type LangConfig, LangParameters, LangRestConfig } from './properties/LangProperty.js';
+import LanguageProperty, {
+    type LanguageConfig, LanguageParameters, LanguageRestConfig
+} from './properties/LanguageProperty.js';
 import LogoProperty, { type LogoConfig, LogoParameters, LogoRestConfig } from './properties/LogoProperty.js';
 import MemberProperty, { type MemberConfig, MemberParameters, MemberRestConfig } from './properties/MemberProperty.js';
 import NicknameProperty, {
@@ -188,6 +191,7 @@ export interface Vcard4GeneratorConfig {
     key?: KeyConfig;
     kind?: KindConfig;
     lang?: LangConfig;
+    language?: LanguageConfig;
     logo?: LogoConfig;
     member?: MemberConfig;
     n?: NConfig;
@@ -262,6 +266,8 @@ export default class Vcard4Generator {
 
     lang: LangPropertyArray;
 
+    language: LanguageConfig | NullProperty;
+
     logo: LogoPropertyArray;
 
     member: MemberPropertyArray;
@@ -331,6 +337,7 @@ export default class Vcard4Generator {
             key,
             kind,
             lang,
+            language,
             logo,
             member,
             n,
@@ -427,6 +434,7 @@ export default class Vcard4Generator {
         this.deathplace = deathplace ? DeathplaceProperty.from(deathplace) : new NullProperty();
         this.gender = gender ? GenderProperty.from(gender) : new NullProperty();
         this.kind = kind ? KindProperty.from(kind) : new NullProperty();
+        this.language = language ? LanguageProperty.from(language) : new NullProperty();
         this.n = n ? NProperty.from(n) : new NullProperty();
         this.prodid = prodid ? ProdidProperty.from(prodid) : new NullProperty();
         this.rev = rev ? RevProperty.from(rev) : new NullProperty();
@@ -463,6 +471,7 @@ export default class Vcard4Generator {
             ...this.key.map(toString),
             this.kind.toString(),
             ...this.lang.map(toString),
+            this.language.toString(),
             ...this.logo.map(toString),
             ...this.member.map(toString),
             this.n.toString(),
@@ -754,6 +763,10 @@ export type {
     LangProperty,
     LangPropertyArray,
     LangRestConfig,
+    LanguageConfig,
+    LanguageParameters,
+    LanguageProperty,
+    LanguageRestConfig,
     LogoConfig,
     LogoParameters,
     LogoProperty,

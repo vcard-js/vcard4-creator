@@ -324,8 +324,10 @@ To-Do
         - [x] `CREATED` Parameter _(RFC 9554)_
         - [x] `DERIVED` Parameter _(RFC 9554)_
         - [x] `PROP-ID` Parameter _(RFC 9554)_
-    - [ ] `LANGUAGE` _(RFC 9554)_
-        - [ ] No Parameters
+    - [x] `LANGUAGE` _(RFC 9554)_
+        - [x] Line Folding
+        - [x] Value Escaping
+        - [x] No Parameters
     - [x] `LOGO`
         - [x] Line Folding
         - [x] Value Escaping
