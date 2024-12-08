@@ -1,11 +1,13 @@
-import AdrProperty, { type AdrConfig, AdrParameters, AdrRestConfig, AdrType } from './properties/AdrProperty.js';
+import AdrProperty, {
+    type AdrConfig, type AdrParameters, type AdrRestConfig, type AdrType
+} from './properties/AdrProperty.js';
 import AnniversaryProperty, {
-    AnniversaryCommonParameters,
+    type AnniversaryCommonParameters,
     type AnniversaryConfig,
-    AnniversaryDateAndOrTimeOrUndefinedValueParameters,
-    AnniversaryParameters,
-    AnniversaryRestConfig,
-    AnniversaryTextValueParameters
+    type AnniversaryDateAndOrTimeOrUndefinedValueParameters,
+    type AnniversaryParameters,
+    type AnniversaryRestConfig,
+    type AnniversaryTextValueParameters
 } from './properties/AnniversaryProperty.js';
 import AdrPropertyArray from './properties/arrays/AdrPropertyArray.js';
 import CaladruriPropertyArray from './properties/arrays/CaladruriPropertyArray.js';
@@ -41,124 +43,148 @@ import TzPropertyArray from './properties/arrays/TzPropertyArray.js';
 import UrlPropertyArray from './properties/arrays/UrlPropertyArray.js';
 import XmlPropertyArray from './properties/arrays/XmlPropertyArray.js';
 import BdayProperty, {
-    BdayCommonParameters,
+    type BdayCommonParameters,
     type BdayConfig,
-    BdayDateAndOrTimeOrUndefinedValueParameters,
-    BdayParameters,
-    BdayRestConfig,
-    BdayTextValueParameters
+    type BdayDateAndOrTimeOrUndefinedValueParameters,
+    type BdayParameters,
+    type BdayRestConfig,
+    type BdayTextValueParameters
 } from './properties/BdayProperty.js';
 import BirthplaceProperty, {
-    type BirthplaceConfig, BirthplaceParameters, BirthplaceRestConfig
+    type BirthplaceConfig, type BirthplaceParameters, type BirthplaceRestConfig
 } from './properties/BirthplaceProperty.js';
 import CaladruriProperty, {
-    type CaladruriConfig, CaladruriParameters, CaladruriRestConfig
+    type CaladruriConfig, type CaladruriParameters, type CaladruriRestConfig
 } from './properties/CaladruriProperty.js';
-import CaluriProperty, { type CaluriConfig, CaluriParameters, CaluriRestConfig } from './properties/CaluriProperty.js';
+import CaluriProperty, {
+    type CaluriConfig, type CaluriParameters, type CaluriRestConfig
+} from './properties/CaluriProperty.js';
 import CategoriesProperty, {
-    type CategoriesConfig, CategoriesParameters, CategoriesRestConfig
+    type CategoriesConfig, type CategoriesParameters, type CategoriesRestConfig
 } from './properties/CategoriesProperty.js';
 import ClientpidmapProperty, {
-    type ClientpidmapConfig, ClientpidmapParameters, ClientpidmapRestConfig
+    type ClientpidmapConfig, type ClientpidmapParameters, type ClientpidmapRestConfig
 } from './properties/ClientpidmapProperty.js';
 import ContactUriProperty, {
-    type ContactUriConfig, ContactUriParameters, ContactUriRestConfig
+    type ContactUriConfig, type ContactUriParameters, type ContactUriRestConfig
 } from './properties/ContactUriProperty.js';
 import CreatedProperty, {
-    type CreatedConfig, CreatedParameters, CreatedRestConfig
+    type CreatedConfig, type CreatedParameters, type CreatedRestConfig
 } from './properties/CreatedProperty.js';
 import DeathdateProperty, {
     type DeathdateCommonParameters,
-    DeathdateConfig,
-    DeathdateDateAndOrTimeOrUndefinedValueParameters,
-    DeathdateParameters,
-    DeathdateRestConfig,
-    DeathdateTextValueParameters
+    type DeathdateConfig,
+    type DeathdateDateAndOrTimeOrUndefinedValueParameters,
+    type DeathdateParameters,
+    type DeathdateRestConfig,
+    type DeathdateTextValueParameters
 } from './properties/DeathdateProperty.js';
 import DeathplaceProperty, {
-    type DeathplaceConfig, DeathplaceParameters, DeathplaceRestConfig
+    type DeathplaceConfig, type DeathplaceParameters, type DeathplaceRestConfig
 } from './properties/DeathplaceProperty.js';
-import EmailProperty, { type EmailConfig, EmailParameters, EmailRestConfig } from './properties/EmailProperty.js';
+import EmailProperty, {
+    type EmailConfig, type EmailParameters, type EmailRestConfig
+} from './properties/EmailProperty.js';
 import ExpertiseProperty, {
-    type ExpertiseConfig, ExpertiseLevel, ExpertiseParameters, ExpertiseRestConfig
+    type ExpertiseConfig, type ExpertiseLevel, type ExpertiseParameters, type ExpertiseRestConfig
 } from './properties/ExpertiseProperty.js';
-import FburlProperty, { type FburlConfig, FburlParameters, FburlRestConfig } from './properties/FburlProperty.js';
-import FnProperty, { type FnConfig, FnParameters, FnRestConfig } from './properties/FnProperty.js';
+import FburlProperty, {
+    type FburlConfig, type FburlParameters, type FburlRestConfig
+} from './properties/FburlProperty.js';
+import FnProperty, { type FnConfig, type FnParameters, type FnRestConfig } from './properties/FnProperty.js';
 import GenderProperty, {
-    type GenderConfig, GenderParameters, GenderRestConfig, Sex
+    type GenderConfig, type GenderParameters, type GenderRestConfig, type Sex
 } from './properties/GenderProperty.js';
-import GeoProperty, { type GeoConfig, GeoParameters, GeoRestConfig } from './properties/GeoProperty.js';
+import GeoProperty, { type GeoConfig, type GeoParameters, type GeoRestConfig } from './properties/GeoProperty.js';
 import GramgenderProperty, {
-    type Gramgender, GramgenderConfig, GramgenderParameters, GramgenderRestConfig
+    type Gramgender, type GramgenderConfig, type GramgenderParameters, type GramgenderRestConfig
 } from './properties/GramgenderProperty.js';
-import HobbyProperty, { type HobbyConfig, HobbyParameters, HobbyRestConfig } from './properties/HobbyProperty.js';
-import ImppProperty, { type ImppConfig, ImppParameters, ImppRestConfig } from './properties/ImppProperty.js';
+import HobbyProperty, {
+    type HobbyConfig, type HobbyParameters, type HobbyRestConfig
+} from './properties/HobbyProperty.js';
+import ImppProperty, { type ImppConfig, type ImppParameters, type ImppRestConfig } from './properties/ImppProperty.js';
 import InterestProperty, {
-    type InterestConfig, InterestParameters, InterestRestConfig
+    type InterestConfig, type InterestParameters, type InterestRestConfig
 } from './properties/InterestProperty.js';
 import KeyProperty, {
     type KeyCommonParameters,
-    KeyConfig,
-    KeyParameters,
-    KeyRestConfig,
-    KeyTextValueParameters,
-    KeyUriOrUndefinedValueParameters
+    type KeyConfig,
+    type KeyParameters,
+    type KeyRestConfig,
+    type KeyTextValueParameters,
+    type KeyUriOrUndefinedValueParameters
 } from './properties/KeyProperty.js';
-import KindProperty, { type Kind, KindConfig, KindParameters, KindRestConfig } from './properties/KindProperty.js';
-import LangProperty, { type LangConfig, LangParameters, LangRestConfig } from './properties/LangProperty.js';
+import KindProperty, {
+    type Kind, KindConfig, type KindParameters, type KindRestConfig
+} from './properties/KindProperty.js';
+import LangProperty, { type LangConfig, type LangParameters, type LangRestConfig } from './properties/LangProperty.js';
 import LanguageProperty, {
-    type LanguageConfig, LanguageParameters, LanguageRestConfig
+    type LanguageConfig, type LanguageParameters, type LanguageRestConfig
 } from './properties/LanguageProperty.js';
-import LogoProperty, { type LogoConfig, LogoParameters, LogoRestConfig } from './properties/LogoProperty.js';
-import MemberProperty, { type MemberConfig, MemberParameters, MemberRestConfig } from './properties/MemberProperty.js';
+import LogoProperty, { type LogoConfig, type LogoParameters, type LogoRestConfig } from './properties/LogoProperty.js';
+import MemberProperty, {
+    type MemberConfig, type MemberParameters, type MemberRestConfig
+} from './properties/MemberProperty.js';
 import NicknameProperty, {
-    type NicknameConfig, NicknameParameters, NicknameRestConfig
+    type NicknameConfig, type NicknameParameters, type NicknameRestConfig
 } from './properties/NicknameProperty.js';
-import NoteProperty, { type NoteConfig, NoteParameters, NoteRestConfig } from './properties/NoteProperty.js';
-import NProperty, { type NConfig, NParameters, NRestConfig } from './properties/NProperty.js';
+import NoteProperty, { type NoteConfig, type NoteParameters, type NoteRestConfig } from './properties/NoteProperty.js';
+import NProperty, { type NConfig, type NParameters, type NRestConfig } from './properties/NProperty.js';
 import NullProperty from './properties/NullProperty.js';
 import OrgDirectoryProperty, {
-    type OrgDirectoryConfig, OrgDirectoryParameters, OrgDirectoryRestConfig
+    type OrgDirectoryConfig, type OrgDirectoryParameters, type OrgDirectoryRestConfig
 } from './properties/OrgDirectoryProperty.js';
-import OrgProperty, { type OrgConfig, OrgParameters, OrgRestConfig } from './properties/OrgProperty.js';
-import PhotoProperty, { type PhotoConfig, PhotoParameters, PhotoRestConfig } from './properties/PhotoProperty.js';
-import ProdidProperty, { type ProdidConfig, ProdidParameters, ProdidRestConfig } from './properties/ProdidProperty.js';
+import OrgProperty, { type OrgConfig, type OrgParameters, type OrgRestConfig } from './properties/OrgProperty.js';
+import PhotoProperty, {
+    type PhotoConfig, type PhotoParameters, type PhotoRestConfig
+} from './properties/PhotoProperty.js';
+import ProdidProperty, {
+    type ProdidConfig, type ProdidParameters, type ProdidRestConfig
+} from './properties/ProdidProperty.js';
 import Property from './properties/Property.js';
 import RelatedProperty, {
     type RelatedCommonParameters,
-    RelatedConfig,
-    RelatedParameters,
-    RelatedRestConfig,
-    RelatedTextValueParameters,
-    RelatedType,
-    RelatedUriOrUndefinedValueParameters
+    type RelatedConfig,
+    type RelatedParameters,
+    type RelatedRestConfig,
+    type RelatedTextValueParameters,
+    type RelatedType,
+    type RelatedUriOrUndefinedValueParameters
 } from './properties/RelatedProperty.js';
-import RevProperty, { type RevConfig, RevParameters, RevRestConfig } from './properties/RevProperty.js';
-import RoleProperty, { type RoleConfig, RoleParameters, RoleRestConfig } from './properties/RoleProperty.js';
-import SoundProperty, { type SoundConfig, SoundParameters, SoundRestConfig } from './properties/SoundProperty.js';
-import SourceProperty, { type SourceConfig, SourceParameters, SourceRestConfig } from './properties/SourceProperty.js';
+import RevProperty, { type RevConfig, type RevParameters, type RevRestConfig } from './properties/RevProperty.js';
+import RoleProperty, {
+    type RoleConfig, type RoleParameters, type RoleRestConfig
+} from './properties/RoleProperty.js';
+import SoundProperty, {
+    type SoundConfig, type SoundParameters, type SoundRestConfig
+} from './properties/SoundProperty.js';
+import SourceProperty, {
+    type SourceConfig, type SourceParameters, type SourceRestConfig
+} from './properties/SourceProperty.js';
 import TelProperty, {
     type TelCommonParameters,
-    TelConfig,
-    TelParameters,
-    TelRestConfig,
-    TelTextOrUndefinedValueParameters,
-    TelType,
-    TelUriValueParameters
+    type TelConfig,
+    type TelParameters,
+    type TelRestConfig,
+    type TelTextOrUndefinedValueParameters,
+    type TelType,
+    type TelUriValueParameters
 } from './properties/TelProperty.js';
-import TitleProperty, { type TitleConfig, TitleParameters, TitleRestConfig } from './properties/TitleProperty.js';
+import TitleProperty, {
+    type TitleConfig, type TitleParameters, type TitleRestConfig
+} from './properties/TitleProperty.js';
 import TzProperty, {
     type TzCommonParameters,
-    TzConfig,
-    TzParameters,
-    TzRestConfig,
-    TzTextOrUtcOffsetOrUndefinedValueParameters,
-    TzUriValueParameters
+    type TzConfig,
+    type TzParameters,
+    type TzRestConfig,
+    type TzTextOrUtcOffsetOrUndefinedValueParameters,
+    type TzUriValueParameters
 } from './properties/TzProperty.js';
-import UidProperty, { type UidConfig, UidParameters, UidRestConfig } from './properties/UidProperty.js';
-import UrlProperty, { type UrlConfig, UrlParameters, UrlRestConfig } from './properties/UrlProperty.js';
+import UidProperty, { type UidConfig, type UidParameters, type UidRestConfig } from './properties/UidProperty.js';
+import UrlProperty, { type UrlConfig, type UrlParameters, type UrlRestConfig } from './properties/UrlProperty.js';
 import VersionProperty, {
-    type VersionConfig, VersionParameters, VersionRestConfig
+    type VersionConfig, type VersionParameters, type VersionRestConfig
 } from './properties/VersionProperty.js';
 import XmlProperty, { type XmlConfig, XmlParameters, XmlRestConfig } from './properties/XmlProperty.js';
 import isNotEmptyString from './util/is-not-empty-string.js';
