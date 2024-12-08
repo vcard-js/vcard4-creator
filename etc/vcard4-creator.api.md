@@ -2073,11 +2073,11 @@ class Vcard4Generator {
     // (undocumented)
     adr: AdrPropertyArray;
     // (undocumented)
-    anniversary: AnniversaryConfig | NullProperty;
+    anniversary: AnniversaryProperty | NullProperty;
     // (undocumented)
-    bday: BdayConfig | NullProperty;
+    bday: BdayProperty | NullProperty;
     // (undocumented)
-    birthplace: BirthplaceConfig | NullProperty;
+    birthplace: BirthplaceProperty | NullProperty;
     // (undocumented)
     caladruri: CaladruriPropertyArray;
     // (undocumented)
@@ -2089,11 +2089,11 @@ class Vcard4Generator {
     // (undocumented)
     contactUri: ContactUriPropertyArray;
     // (undocumented)
-    created: CreatedConfig | NullProperty;
+    created: CreatedProperty | NullProperty;
     // (undocumented)
-    deathdate: DeathdateConfig | NullProperty;
+    deathdate: DeathdateProperty | NullProperty;
     // (undocumented)
-    deathplace: DeathplaceConfig | NullProperty;
+    deathplace: DeathplaceProperty | NullProperty;
     // (undocumented)
     email: EmailPropertyArray;
     // (undocumented)
@@ -2103,7 +2103,7 @@ class Vcard4Generator {
     // (undocumented)
     fn: FnPropertyArray;
     // (undocumented)
-    gender: GenderConfig | NullProperty;
+    gender: GenderProperty | NullProperty;
     // (undocumented)
     geo: GeoPropertyArray;
     // (undocumented)
@@ -2117,17 +2117,17 @@ class Vcard4Generator {
     // (undocumented)
     key: KeyPropertyArray;
     // (undocumented)
-    kind: KindConfig | NullProperty;
+    kind: KindProperty | NullProperty;
     // (undocumented)
     lang: LangPropertyArray;
     // (undocumented)
-    language: LanguageConfig | NullProperty;
+    language: LanguageProperty | NullProperty;
     // (undocumented)
     logo: LogoPropertyArray;
     // (undocumented)
     member: MemberPropertyArray;
     // (undocumented)
-    n: NConfig | NullProperty;
+    n: NProperty | NullProperty;
     // (undocumented)
     nickname: NicknamePropertyArray;
     // (undocumented)
@@ -2139,11 +2139,11 @@ class Vcard4Generator {
     // (undocumented)
     photo: PhotoPropertyArray;
     // (undocumented)
-    prodid: ProdidConfig | NullProperty;
+    prodid: ProdidProperty | NullProperty;
     // (undocumented)
     related: RelatedPropertyArray;
     // (undocumented)
-    rev: RevConfig | NullProperty;
+    rev: RevProperty | NullProperty;
     // (undocumented)
     role: RolePropertyArray;
     // (undocumented)
@@ -2159,13 +2159,13 @@ class Vcard4Generator {
     // (undocumented)
     tz: TzPropertyArray;
     // (undocumented)
-    uid: UidConfig | NullProperty;
+    uid: UidProperty | NullProperty;
     // (undocumented)
     url: UrlPropertyArray;
     // (undocumented)
     validate(): void;
     // (undocumented)
-    version: VersionConfig;
+    version: VersionProperty;
     // (undocumented)
     xml: XmlPropertyArray;
 }

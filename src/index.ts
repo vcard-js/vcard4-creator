@@ -244,11 +244,11 @@ export interface Vcard4GeneratorConfig {
 export default class Vcard4Generator {
     adr: AdrPropertyArray;
 
-    anniversary: AnniversaryConfig | NullProperty;
+    anniversary: AnniversaryProperty | NullProperty;
 
-    bday: BdayConfig | NullProperty;
+    bday: BdayProperty | NullProperty;
 
-    birthplace: BirthplaceConfig | NullProperty;
+    birthplace: BirthplaceProperty | NullProperty;
 
     caluri: CaluriPropertyArray;
 
@@ -260,11 +260,11 @@ export default class Vcard4Generator {
 
     contactUri: ContactUriPropertyArray;
 
-    created: CreatedConfig | NullProperty;
+    created: CreatedProperty | NullProperty;
 
-    deathdate: DeathdateConfig | NullProperty;
+    deathdate: DeathdateProperty | NullProperty;
 
-    deathplace: DeathplaceConfig | NullProperty;
+    deathplace: DeathplaceProperty | NullProperty;
 
     email: EmailPropertyArray;
 
@@ -274,7 +274,7 @@ export default class Vcard4Generator {
 
     fn: FnPropertyArray;
 
-    gender: GenderConfig | NullProperty;
+    gender: GenderProperty | NullProperty;
 
     geo: GeoPropertyArray;
 
@@ -288,17 +288,17 @@ export default class Vcard4Generator {
 
     key: KeyPropertyArray;
 
-    kind: KindConfig | NullProperty;
+    kind: KindProperty | NullProperty;
 
     lang: LangPropertyArray;
 
-    language: LanguageConfig | NullProperty;
+    language: LanguageProperty | NullProperty;
 
     logo: LogoPropertyArray;
 
     member: MemberPropertyArray;
 
-    n: NConfig | NullProperty;
+    n: NProperty | NullProperty;
 
     nickname: NicknamePropertyArray;
 
@@ -310,11 +310,11 @@ export default class Vcard4Generator {
 
     photo: PhotoPropertyArray;
 
-    prodid: ProdidConfig | NullProperty;
+    prodid: ProdidProperty | NullProperty;
 
     related: RelatedPropertyArray;
 
-    rev: RevConfig | NullProperty;
+    rev: RevProperty | NullProperty;
 
     role: RolePropertyArray;
 
@@ -328,11 +328,11 @@ export default class Vcard4Generator {
 
     tz: TzPropertyArray;
 
-    uid: UidConfig | NullProperty;
+    uid: UidProperty | NullProperty;
 
     url: UrlPropertyArray;
 
-    version: VersionConfig;
+    version: VersionProperty;
 
     xml: XmlPropertyArray;
 
