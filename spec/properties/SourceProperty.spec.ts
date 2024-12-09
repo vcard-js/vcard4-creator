@@ -21,7 +21,7 @@ describe('SourceProperty', () => {
 
         it('returns the proper string format', () => {
             const value = 'ldap://ldap.example.com/cn=Babs%20Jensen,%20o=Babsco,%20c=US';
-            const escapedValue = 'ldap://ldap.example.com/cn=Babs%20Jensen\\,%20o=Babsco\\,%20c=US';
+            const escapedValue = String.raw`ldap://ldap.example.com/cn=Babs%20Jensen\,%20o=Babsco\,%20c=US`;
             const source = new SourceProperty(value);
 
             expect(source.toString()).to.equal(`SOURCE:${escapedValue}`);
@@ -33,7 +33,7 @@ describe('SourceProperty', () => {
             const source = new SourceProperty(value, parameters);
             const actual = source.toString();
             const expected = [
-                'SOURCE;PREF=1:ldap://ldap.example.com/cn=Babs%20Jensen\\,%20o=Babsco\\,%20c=U',
+                String.raw`SOURCE;PREF=1:ldap://ldap.example.com/cn=Babs%20Jensen\,%20o=Babsco\,%20c=U`,
                 'S'
             ].join(`${EOL}${FOLD_CONTINUATION_CHAR}`);
 
@@ -43,7 +43,7 @@ describe('SourceProperty', () => {
         it('correctly groups the property', () => {
             const parameters = undefined;
             const value = 'ldap://ldap.example.com/cn=Babs%20Jensen,%20o=Babsco,%20c=US';
-            const escapedValue = 'ldap://ldap.example.com/cn=Babs%20Jensen\\,%20o=Babsco\\,%20c=US';
+            const escapedValue = String.raw`ldap://ldap.example.com/cn=Babs%20Jensen\,%20o=Babsco\,%20c=US`;
             const options = { group: 1 };
             const source = new SourceProperty(value, parameters, options);
 
@@ -55,7 +55,7 @@ describe('SourceProperty', () => {
             const value = 'ldap://ldap.example.com/cn=Babs%20Jensen,%20o=Babsco,%20c=US';
             const source = new SourceProperty(value, parameters);
             const expected = [
-                'SOURCE;VALUE=uri:ldap://ldap.example.com/cn=Babs%20Jensen\\,%20o=Babsco\\,%20',
+                String.raw`SOURCE;VALUE=uri:ldap://ldap.example.com/cn=Babs%20Jensen\,%20o=Babsco\,%20`,
                 'c=US'
             ].join(`${EOL}${FOLD_CONTINUATION_CHAR}`);
 

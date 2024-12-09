@@ -25,6 +25,9 @@ export default abstract class Property {
         /** @see {@link https://datatracker.ietf.org/doc/html/rfc6350#section-3.4 RFC 6350 - vCard Format Specification § Property Value Escaping} */
         const separatorMatcher = new RegExp(`(?<!\\\\)${SEPARATOR}`);
 
+        /** @todo Switch over to the clearer String.raw format but ensure we have ample tests for this first! */
+        // const separatorMatcher = new RegExp(String.raw`(?<!\\)${SEPARATOR}`);
+
         return (this.valueOf() as number | string).toString().split(separatorMatcher);
     }
 
